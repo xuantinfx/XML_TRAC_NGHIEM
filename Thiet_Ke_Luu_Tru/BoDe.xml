@@ -1,0 +1,18 @@
+<DS_BO_DE>
+    <DE Ma_de='0' Ma_nguoi_tao='3'>
+        <DS_CAU_HOI>
+            <CAU Ma_cau_hoi='1'>
+            <CAU Ma_cau_hoi='2'>
+            <CAU Ma_cau_hoi='5'>
+            <CAU Ma_cau_hoi='9'>
+        </DS_CAU_HOI>
+    </DE>
+    <DE Ma_de='1' Ma_nguoi_tao='3'>
+        <DS_CAU_HOI>
+            <CAU Ma_cau_hoi='7'>
+            <CAU Ma_cau_hoi='4'>
+            <CAU Ma_cau_hoi='5'>
+            <CAU Ma_cau_hoi='9'>
+        </DS_CAU_HOI>
+    </DE>
+</DS_BO_DE>
