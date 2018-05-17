@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DS_BO_DE>
+  <DE Ma_de="0" Ma_nguoi_tao="2">
+    <DS_CAU_HOI>
+      <CAU Ma_cau_hoi="1"/>
+      <CAU Ma_cau_hoi="9"/>
+      <CAU Ma_cau_hoi="2"/>
+      <CAU Ma_cau_hoi="4"/>
+      <CAU Ma_cau_hoi="5"/>
+    </DS_CAU_HOI>
+  </DE>
+  <DE Ma_de="1" Ma_nguoi_tao="2">
+    <DS_CAU_HOI>
+      <CAU Ma_cau_hoi="1"/>
+      <CAU Ma_cau_hoi="9"/>
+      <CAU Ma_cau_hoi="2"/>
+      <CAU Ma_cau_hoi="4"/>
+      <CAU Ma_cau_hoi="5"/>
+    </DS_CAU_HOI>
+  </DE>
+  <DE Ma_de="2" Ma_nguoi_tao="2">
+    <DS_CAU_HOI>
+      <CAU Ma_cau_hoi="1"/>
+      <CAU Ma_cau_hoi="9"/>
+      <CAU Ma_cau_hoi="2"/>
+      <CAU Ma_cau_hoi="4"/>
+      <CAU Ma_cau_hoi="5"/>
+    </DS_CAU_HOI>
+  </DE>
+  <DE Ma_de="3" Ma_nguoi_tao="4">
+    <DS_CAU_HOI>
+      <CAU Ma_cau_hoi="1"/>
+      <CAU Ma_cau_hoi="9"/>
+      <CAU Ma_cau_hoi="2"/>
+      <CAU Ma_cau_hoi="4"/>
+      <CAU Ma_cau_hoi="5"/>
+      <CAU Ma_cau_hoi="14"/>
+      <CAU Ma_cau_hoi="87"/>
+    </DS_CAU_HOI>
+  </DE>
+</DS_BO_DE>
