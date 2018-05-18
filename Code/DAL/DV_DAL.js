@@ -120,6 +120,12 @@ http
 
             req.on('end', function () {
               let postdata = qs.parse(body);
+              if(postdata.maCacCauHoi == undefined ||
+                postdata.maNguoiDang == undefined )
+                {
+                  res.setHeader("Content-type", "text/xml");
+                  return res.end();
+                }
               //console.log(postdata)
               let maCacCauHoi = JSON.parse("[" + postdata.maCacCauHoi + "]")[0];
               let result = DAL.boDeWrite(pathDataBoDe, CacheXMLDOMBoDe, postdata.maNguoiTao, maCacCauHoi);
@@ -145,6 +151,13 @@ http
             req.on('end', function () {
               let postdata = qs.parse(body);
               //console.log(postdata)
+              if(postdata.maDe == undefined ||
+                postdata.maCacCauHoi == undefined ||
+                postdata.maNguoiTao == undefined )
+                {
+                  res.setHeader("Content-type", "text/xml");
+                  return res.end();
+                }
               let maDe = postdata.maDe;
               let maCacCauHoi = JSON.parse("[" + postdata.maCacCauHoi + "]")[0];
               let result = DAL.boDeUpdate(pathDataBoDe, CacheXMLDOMBoDe, maDe, postdata.maNguoiTao, maCacCauHoi);
@@ -169,6 +182,13 @@ http
 
             req.on('end', function () {
               let postdata = qs.parse(body);
+              if(postdata.dsDapAn == undefined ||
+                postdata.cauHoi == undefined ||
+                postdata.dapAn == undefined ||
+                postdata.maNguoiDang== undefined) {
+                  res.setHeader("Content-type", "text/xml");
+                  return res.end();
+                }
               let dsDapAn = JSON.parse("[" + postdata.dsDapAn + "]")[0];
               let cauHoi = postdata.cauHoi;
               let dapAn = postdata.dapAn;
@@ -197,6 +217,17 @@ http
             req.on('end', function () {
               let postdata = qs.parse(body);
 
+              if(postdata.maCauHoi == undefined ||
+                postdata.daDuyet == undefined ||
+                postdata.maNguoiDang == undefined ||
+                postdata.maNguoiDuyet == undefined ||
+                postdata.dsDapAn == undefined ||
+                postdata.cauHoi == undefined ||
+                postdata.dapAn == undefined) {
+                  res.setHeader("Content-type", "text/xml");
+                  return res.end();
+                }
+              
               let maCauHoi = postdata.maCauHoi;
               let daDuyet = postdata.daDuyet;
               let maNguoiDang = postdata.maNguoiDang;
@@ -228,6 +259,12 @@ http
             req.on('end', function () {
               let postdata = qs.parse(body);
               //console.log(postdata)
+              if(postdata.laGiaoVien == undefined ||
+                postdata.ten == undefined ||
+                postdata.matKhau == undefined) {
+                  res.setHeader("Content-type", "text/xml");
+                  return res.end();
+                }
               let laGiaoVien = postdata.laGiaoVien;
               let ten = postdata.ten;
               let matKhau = postdata.matKhau;
@@ -255,6 +292,12 @@ http
             req.on('end', function () {
               let postdata = qs.parse(body);
               //console.log(postdata)
+              if(postdata.laGiaoVien == undefined ||
+                postdata.ten == undefined ||
+                postdata.matKhau == undefined) {
+                  res.setHeader("Content-type", "text/xml");
+                  return res.end();
+                }
               let laGiaoVien = postdata.laGiaoVien;
               let ma;
               if(laGiaoVien == 'true'){
@@ -262,6 +305,11 @@ http
               }
               else{
                 ma = postdata.maQuanLy;
+              }
+              if(ma == undefined)
+              {
+                res.setHeader("Content-type", "text/xml");
+                return res.end();
               }
               let ten = postdata.ten;
               let matKhau = postdata.matKhau;
