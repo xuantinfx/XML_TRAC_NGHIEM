@@ -8,7 +8,7 @@ let Cache = undefined;
 // Khởi tạo dữ liệu cho Cache
 BUS.InitCache(URL_DAL, (err, result) => {
   if (err) {
-    console.log(err + "");
+    console.log(err);
     return;
   }
   Cache = result;
