@@ -87,10 +87,8 @@ module.exports.InitCache = async function(URL_DAL, cb) {
     // Chuyển từ dạng XML sang DOMXML
     let resultDOM = await parseStringXML(result);
 
-
-
     //Đã cache đủ thì trả về
-    cb(null, Cache);
+    cb(null, resultDOM);
     return;
   } catch (err) {
     //lỗi
@@ -99,16 +97,42 @@ module.exports.InitCache = async function(URL_DAL, cb) {
   }
 };
 
-module.exports.RebuildCache = async function(XML,cb) {
-  let Cache = {};
-  try {
-    // Chuyển từ dạng XML sang DOMXML
-    let resultDOM = await parseStringXML(XML);
-
-    //Đã cache đủ thì trả về
-    return cb(null, Cache);
-  } catch (err) {
-    //lỗi
-    return cb(err);
+module.exports.layCauHoi = (XMLDOMCauHoi, maCauHoi) => {
+  //console.log(XMLDOMCauHoi.DS_CAU_HOI.CAU_HOI);
+  let result = {};
+  let listCauHoi = XMLDOMCauHoi.DS_CAU_HOI.CAU_HOI;
+  let i;
+  for(i = 0; i < listCauHoi.length; i++) {
+    if((maCauHoi == listCauHoi[i].$.Ma_cau_hoi) && (listCauHoi[i].$.Da_duyet == 'true')) {
+      result.CAU_HOI = listCauHoi[i];
+      break;
+    }
   }
-};
+  if(i >= listCauHoi.length) {
+    return "";
+  }
+  return (new xml2js.Builder).buildObject(result)
+  //return result;
+}
+
+module.exports.layDSCauHoi = (XMLDOMCauHoi) => {
+  return (new xml2js.Builder).buildObject(XMLDOMCauHoi)
+}
+
+module.exports.layDSBoDe = (XMLDOMBoDe) => {
+  return (new xml2js.Builder).buildObject(XMLDOMBoDe)
+}
+
+module.exports.layBoDe = (XMLDOMBoDe, maDe) => {
+  console.log(XMLDOMBoDe.DS_BO_DE.DE);
+  let listBoDe = XMLDOMBoDe.DS_BO_DE.DE;
+  let result = {};
+  let i = 0;
+  for(i = 0; i < listBoDe.length; i++) {
+    if(listBoDe[i].$.Ma_de == maDe) {
+      result.DE = listBoDe[i];
+      break;
+    }
+  }
+  return (new xml2js.Builder).buildObject(result)
+}
