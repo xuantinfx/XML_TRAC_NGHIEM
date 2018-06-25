@@ -9,6 +9,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <style>
         .btn1 {
             padding: 10px;
@@ -26,60 +27,18 @@
             <h1>Tự ôn tập các câu hỏi thi bằng lái A1</h1>
         </div>
         <div class="row">
-            <div class="col-3">
-                <div class="" style="margin-top: 5vh">
-                    <h5>Danh sách các câu hỏi</h5>
-                    <div id='danh-sach-cau-hoi' class='row'>
-                        <button type="button" class="btn1 btn-secondary col">1</button>
-                        <button type="button" class="btn1 btn-secondary col">2</button>
-                        <button type="button" class="btn1 btn-secondary col">3</button>
-                        <button type="button" class="btn1 btn-secondary col">4</button>
-                        <button type="button" class="btn1 btn-secondary col">5</button>
-                        <div class="w-100"></div>
-                        <button type="button" class="btn1 btn-secondary col">6</button>
-                        <button type="button" class="btn1 btn-secondary col border active">7</button>
-                        <button type="button" class="btn1 btn-secondary col">8</button>
-                        <button type="button" class="btn1 btn-secondary col">9</button>
-                        <button type="button" class="btn1 btn-secondary col">10</button>
-                        <div class="w-100"></div>
-                        <button type="button" class="btn1 btn-secondary col">11</button>
-                        <button type="button" class="btn1 btn-secondary col">12</button>
-                        <button type="button" class="btn1 btn-secondary col">13</button>
-                        <button type="button" class="btn1 btn-secondary col">14</button>
-                        <button type="button" class="btn1 btn-secondary col">15</button>
-                    </div>
+            <div class="col-3 mt-5">
+                <h5>Danh sách các câu hỏi</h5>
+                <div id='danh-sach-cau-hoi' class='row'>
                 </div>
             </div>
             <div class="col-9">
-                <div id="noi-dung-cau-hoi" class="d-flex justify-content-center" style="margin-top: 5vh">
-                    <div class="d-flex justify-content-start row">
-                        <h5>Câu 7:</h5>
-                        <div class="w-100"></div>
-                        <p>Đèn đỏ dừng bao nhiêu giây?</p>
-                        <div class="w-100"></div>
-                        <div>
-                            <div class="clearfix">
-                                <input type="radio" name="qs7" id="qs70">
-                                <label for="qs70">30s</label>
-                            </div>
-                            <div class="clearfix">
-                                <input type="radio" name="qs7" id="qs71">
-                                <label for="qs71">40s</label>
-                            </div>
-                            <div class="clearfix">
-                                <input type="radio" name="qs7" id="qs72">
-                                <label for="qs72">50s</label>
-                            </div>
-                            <div class="clearfix">
-                                <input type="radio" name="qs7" id="qs73">
-                                <label for="qs70">60s</label>
-                            </div>
-                        </div>
-                        <div class="w-100"></div>
-                        <div class="">
-                                <button class='btn-warning'>Đáp án</button>
-                                <button class='btn-success'>Qua câu tiếp theo</button>
-                            </div>
+                <div id="noi-dung-cau-hoi" style="margin-top: 5vh; text-align: center">
+                    <i style="font-size: 48px;" class="fa fa-spin fa-spinner text-primary"></i>
+                </div>
+                <div class="row">
+                    <div class="col-3 offset-3 mt-5">
+                        <a class="btn btn-block btn-info" href="/khach-tham-quan/tu-ren-luyen-bo-de">Luyện đề ngay</a>
                     </div>
                 </div>
             </div>
@@ -87,9 +46,148 @@
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script src="/js/default.js"></script>
+    <script>
+        //Biến dùng chung
+        var dsCauHoi = null;
+        var maCauHoiDangChon = null;
+        var maDapAnDangChon = null;
+        var dapAnCuaCauHoiDangChon = null;
+        var daXemDapAn = false;
+
+        //Biến cố khởi động
+        $(document).ready(() => {
+            requestApi(
+                "/lay-danh-sach-cau-hoi",
+                "get"
+            ).then(res => {
+                if (res == "") {
+                    //chuyen huong ve dang nhap
+                }
+                dsCauHoi = res.getElementsByTagName(Tag.CAU_HOI);
+                let stt = 1;
+                let cauHoiDauTien = null;
+                for (let i = 0; i < dsCauHoi.length; i++) {
+                    let maCauHoi = dsCauHoi[i].getAttribute(Attri.Ma_cau_hoi);
+                    // let dapAn = dsCauHoi[i].getAttribute(Attri.Dap_an);
+                    // let de = dsCauHoi[i].getElementsByTagName(Tag.DE)[0].textContent;
+                    let daDuyet = dsCauHoi[i].getAttribute(Attri.Da_duyet);
+                    if (daDuyet == "true") {
+                        if (stt == 1) {
+                            cauHoiDauTien = maCauHoi;
+                        }
+                        $("#danh-sach-cau-hoi").append(
+                            `<button type="button" id="cau-hoi${maCauHoi}" onClick="chonCauHoi('${maCauHoi}')" class="btn1 btn-secondary col-3">${stt++}</button>`
+                        )
+                    }
+                }
+                chonCauHoi(cauHoiDauTien);
+            })
+        });
+
+        //Biến cố chọn câu hỏi
+        const chonCauHoi = (maCauHoi) => {
+            daXemDapAn = false;
+            maDapAnDangChon = null;
+            if (maCauHoiDangChon)
+                $("#cau-hoi" + maCauHoiDangChon)[0].className = "btn1 btn-secondary col-3"
+            maCauHoiDangChon = maCauHoi;
+            $("#cau-hoi" + maCauHoi)[0].className = "btn1 btn-info col-3 border active"
+            for (let i = 0; i < dsCauHoi.length; i++) {
+                let maCauHoiTam = dsCauHoi[i].getAttribute(Attri.Ma_cau_hoi);
+                let de = dsCauHoi[i].getElementsByTagName(Tag.DE)[0].textContent;
+                let daDuyet = dsCauHoi[i].getAttribute(Attri.Da_duyet);
+                if (daDuyet == "true" && maCauHoi == maCauHoiTam) {
+                    dapAnCuaCauHoiDangChon = dsCauHoi[i].getAttribute(Attri.Dap_an);
+                    let htmlTemp = "";
+                    htmlTemp =
+                        `
+                    <div class="row">
+                        <div class="col-9">
+                        <h3>Câu hỏi: ${de}</h3>
+                        <div>
+                    `
+
+                    let dsDapAn = dsCauHoi[i].getElementsByTagName(Tag.DAP_AN);
+                    for (let j = 0; j < dsDapAn.length; j++) {
+                        console.log(dsDapAn[j]);
+                        let maDapAn = dsDapAn[j].getAttribute(Attri.Ma_dap_an);
+                        let dapAn = dsDapAn[j].textContent;
+                        htmlTemp +=
+                            `
+                            <div class="mt-3">
+                                <button id="dap-an-${maDapAn}" class="btn btn-block btn-secondary" onclick="chonDapAn('${maDapAn}')">${dapAn}</button>
+                            </div>
+                        `
+                    }
+
+                    htmlTemp +=
+                        `
+                        </div>
+                        </div>
+                        <div class="col-9 mt-5 text-center">
+                            <div class="row ml-1 mr-1">
+                                <button class='btn-primary col-5 btn' onclick="xemDapAn()">Đáp án</button>
+                                <button class='btn-success col-5 btn offset-2' onclick="xemCauHoiKeTiep()">Qua câu tiếp theo</button>
+                            </div>
+                        </div>
+                    </div>
+                    `
+                    $("#noi-dung-cau-hoi")[0].innerHTML = htmlTemp;
+                    break;
+                }
+            }
+        }
+
+        //Biến cố chọn đáp án
+        const chonDapAn = (maDapAn) => {
+            console.log(maDapAn);
+            if (daXemDapAn == false) {
+                if (maDapAnDangChon)
+                    $("#dap-an-" + maDapAnDangChon)[0].className = "btn btn-block btn-secondary"
+                $("#dap-an-" + maDapAn)[0].className = "btn btn-block btn-warning"
+                maDapAnDangChon = maDapAn;
+            }
+        }
+
+        //Biến cố xem đáp án
+        const xemDapAn = () => {
+            daXemDapAn = true;
+            if (dapAnCuaCauHoiDangChon != maDapAnDangChon && maDapAnDangChon) {
+                $("#dap-an-" + maDapAnDangChon)[0].className = "btn btn-block btn-danger"
+            }
+            $("#dap-an-" + dapAnCuaCauHoiDangChon)[0].className = "btn btn-block btn-success"
+        }
+        //Biến cố chuyển câu kế tiếp
+        const xemCauHoiKeTiep = () => {
+            for (let i = 0; i < dsCauHoi.length; i++) {
+                let maCauHoiTam = dsCauHoi[i].getAttribute(Attri.Ma_cau_hoi);
+                let daDuyet = dsCauHoi[i].getAttribute(Attri.Da_duyet);
+                if (daDuyet == "true" && maCauHoiDangChon == maCauHoiTam) {
+                    let j = i + 1;
+                    //day la cau cuoi cung
+                    if (j == dsCauHoi.length) {
+                        j = 0;
+                    }
+                    for (; j < dsCauHoi.length; j++) {
+                        let daDuyet1 = dsCauHoi[j].getAttribute(Attri.Da_duyet);
+                        if (daDuyet1 == "true") {
+                            chonCauHoi(dsCauHoi[j].getAttribute(Attri.Ma_cau_hoi))
+                            return;
+                        }
+                        if (j == dsCauHoi.length - 1)
+                            j = -1;
+                    }
+                    break;
+                }
+            }
+        }
+    </script>
+
 </body>
 
 </html>
