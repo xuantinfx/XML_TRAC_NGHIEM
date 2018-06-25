@@ -124,7 +124,6 @@ module.exports.layDSBoDe = (XMLDOMBoDe) => {
 }
 
 module.exports.layBoDe = (XMLDOMBoDe, maDe) => {
-  console.log(XMLDOMBoDe.DS_BO_DE.DE);
   let listBoDe = XMLDOMBoDe.DS_BO_DE.DE;
   let result = {};
   let i = 0;
