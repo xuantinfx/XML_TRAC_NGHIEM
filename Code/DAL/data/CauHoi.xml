@@ -9,14 +9,16 @@
       <DAP_AN Ma_dap_an="3">70s</DAP_AN>
     </DS_DAP_AN>
   </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="2" Dap_an="0" Da_duyet="false" Ma_nguoi_dang="1">
-    <DE>Đèn đỏ dừng bao nhiêu giây?</DE>
-    <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">20s</DAP_AN>
-      <DAP_AN Ma_dap_an="1">30s</DAP_AN>
-      <DAP_AN Ma_dap_an="2">50s</DAP_AN>
-      <DAP_AN Ma_dap_an="3">70s</DAP_AN>
-    </DS_DAP_AN>
+  <CAU_HOI>
+    <CAU_HOI Ma_cau_hoi="2" Dap_an="0" Da_duyet="true" Ma_nguoi_dang="1" Ma_nguoi_duyet="Trinh">
+      <DE>Đèn đỏ dừng bao nhiêu giây?</DE>
+      <DS_DAP_AN>
+        <DAP_AN Ma_dap_an="0">20s</DAP_AN>
+        <DAP_AN Ma_dap_an="1">30s</DAP_AN>
+        <DAP_AN Ma_dap_an="2">50s</DAP_AN>
+        <DAP_AN Ma_dap_an="3">70s</DAP_AN>
+      </DS_DAP_AN>
+    </CAU_HOI>
   </CAU_HOI>
   <CAU_HOI Ma_cau_hoi="3" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="2">
     <DE>xuaan tin ddax dep trai</DE>
@@ -25,6 +27,15 @@
       <DAP_AN Ma_dap_an="1">40s</DAP_AN>
       <DAP_AN Ma_dap_an="2">50s</DAP_AN>
       <DAP_AN Ma_dap_an="3">61s</DAP_AN>
+    </DS_DAP_AN>
+  </CAU_HOI>
+  <CAU_HOI Ma_cau_hoi="4" Dap_an="1" Da_duyet="false" Ma_nguoi_dang="12">
+    <DE>Biển báo cấm màu gì</DE>
+    <DS_DAP_AN>
+      <DAP_AN Ma_dap_an="0">xanh</DAP_AN>
+      <DAP_AN Ma_dap_an="1">do</DAP_AN>
+      <DAP_AN Ma_dap_an="2">tim</DAP_AN>
+      <DAP_AN Ma_dap_an="3">vang</DAP_AN>
     </DS_DAP_AN>
   </CAU_HOI>
 </DS_CAU_HOI>

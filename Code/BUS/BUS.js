@@ -136,3 +136,92 @@ module.exports.layBoDe = (XMLDOMBoDe, maDe) => {
   }
   return (new xml2js.Builder).buildObject(result)
 }
+
+module.exports.themCauHoi = async (XMLDOMCauHoi, data) => {
+  return new Promise((resolve, reject) => {
+    console.log(data)
+    request(
+      {
+        uri: URL_DAL + '/cau-hoi/write',
+        method: 'POST',
+        json: data
+      },
+      (err, res, body) => {
+        if (err) {
+          return reject(err);
+        }
+        else{
+          if(body == '') {
+            return reject(new Error('respone data is empty'))
+          }
+          return resolve(body);
+        }
+      }
+    )
+  })
+}
+
+module.exports.duyetCauHoi = async (XMLDOMCauHoi, data) => {
+  let result = {};
+  let maCauHoi = data.maCauHoi;
+  let listCauHoi = XMLDOMCauHoi.DS_CAU_HOI.CAU_HOI;
+  let i;
+  for(i = 0; i < listCauHoi.length; i++) {
+    console.log(typeof(maCauHoi), typeof(listCauHoi[i].$.Ma_cau_hoi))
+    if(maCauHoi == listCauHoi[i].$.Ma_cau_hoi) {
+      result.CAU_HOI = listCauHoi[i];
+      break;
+    }
+  }
+  let cauHoi = (new xml2js.Builder).buildObject(result)
+  cauHoi = await parseXML(cauHoi);
+  cauHoi.CAU_HOI.$.Ma_nguoi_duyet = 'Trinh'
+  cauHoi.CAU_HOI.$.Da_duyet = 'true'
+  return new Promise((resolve, reject) => {
+    console.log(data)
+    request(
+      {
+        uri: URL_DAL + '/cau-hoi/update',
+        method: 'POST',
+        json: cauHoi
+      },
+      (err, res, body) => {
+        if (err) {
+          return reject(err);
+        }
+        else{
+          if(body == '') {
+            return reject(new Error('respone data is empty'))
+          }
+          return resolve(body);
+        }
+      }
+    )
+  })
+}
+
+
+module.exports.taoBoDe = async (XMLDOMCauHoi, data) => {
+  return new Promise((resolve, reject) => {
+    data.maNguoiTao = "12";
+    console.log(data,'-------')
+    request(
+      {
+        uri: URL_DAL + '/bo-de/write',
+        method: 'POST',
+        json: data
+      },
+      (err, res, body) => {
+        if (err) {
+          return reject(err);
+        }
+        else{
+          if(body == '') {
+            return reject(new Error('respone data is empty'))
+          }
+          return resolve(body);
+        }
+      }
+    )
+  })
+}

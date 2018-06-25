@@ -119,16 +119,16 @@ http
             });
 
             req.on('end', function () {
-              let postdata = qs.parse(body);
+              let postdata = JSON.parse(body);
+              console.log(body)
               if(postdata.maCacCauHoi == undefined ||
-                postdata.maNguoiDang == undefined )
+                postdata.maNguoiTao == undefined )
                 {
                   res.setHeader("Content-type", "text/xml");
                   return res.end();
                 }
               //console.log(postdata)
-              let maCacCauHoi = JSON.parse("[" + postdata.maCacCauHoi + "]")[0];
-              let result = DAL.boDeWrite(pathDataBoDe, CacheXMLDOMBoDe, postdata.maNguoiTao, maCacCauHoi);
+              let result = DAL.boDeWrite(pathDataBoDe, CacheXMLDOMBoDe, postdata.maNguoiTao, postdata.maCacCauHoi);
               res.setHeader("Content-type", "text/xml");
               res.end(result[1]);
               CacheXMLDOMBoDe = result[0];
@@ -181,7 +181,8 @@ http
             });
 
             req.on('end', function () {
-              let postdata = qs.parse(body);
+              let postdata = JSON.parse(body);
+              console.log(postdata)
               if(postdata.dsDapAn == undefined ||
                 postdata.cauHoi == undefined ||
                 postdata.dapAn == undefined ||
@@ -189,7 +190,8 @@ http
                   res.setHeader("Content-type", "text/xml");
                   return res.end();
                 }
-              let dsDapAn = JSON.parse("[" + postdata.dsDapAn + "]")[0];
+              let dsDapAn = postdata.dsDapAn.split(';');
+              console.log(dsDapAn, typeof(dsDapAn))
               let cauHoi = postdata.cauHoi;
               let dapAn = postdata.dapAn;
               let maNguoiDang = postdata.maNguoiDang;
@@ -215,28 +217,22 @@ http
             });
 
             req.on('end', function () {
-              let postdata = qs.parse(body);
-
-              if(postdata.maCauHoi == undefined ||
-                postdata.daDuyet == undefined ||
-                postdata.maNguoiDang == undefined ||
-                postdata.maNguoiDuyet == undefined ||
-                postdata.dsDapAn == undefined ||
-                postdata.cauHoi == undefined ||
-                postdata.dapAn == undefined) {
+              let postdata = JSON.parse(body);
+              console.log(postdata)
+              if(postdata.CAU_HOI == undefined ||
+                postdata.CAU_HOI.$ == undefined ||
+                postdata.CAU_HOI.$.Ma_cau_hoi == undefined ||
+                postdata.CAU_HOI.$.Da_duyet == undefined ||
+                postdata.CAU_HOI.$.Ma_nguoi_dang == undefined ||
+                postdata.CAU_HOI.$.Ma_nguoi_duyet == undefined ||
+                postdata.CAU_HOI.DS_DAP_AN == undefined ||
+                postdata.CAU_HOI.DE== undefined ||
+                postdata.CAU_HOI.$.Dap_an == undefined) {
                   res.setHeader("Content-type", "text/xml");
                   return res.end();
-                }
+              }
               
-              let maCauHoi = postdata.maCauHoi;
-              let daDuyet = postdata.daDuyet;
-              let maNguoiDang = postdata.maNguoiDang;
-              let maNguoiDuyet = postdata.maNguoiDuyet;
-              let dsDapAn = JSON.parse("[" + postdata.dsDapAn + "]")[0];
-              let cauHoi = postdata.cauHoi;
-              let dapAn = postdata.dapAn;
-              //console.log(cauHoi,dsDapAn,dapAn,maNguoiDang);
-              let result = DAL.cauHoiUpdate(pathDataCauHoi, CacheXMLDOMCauHoi, maCauHoi, daDuyet, maNguoiDang, maNguoiDuyet, cauHoi, dsDapAn, dapAn);
+              let result = DAL.cauHoiUpdate(pathDataCauHoi, CacheXMLDOMCauHoi, postdata);
               res.setHeader("Content-type", "text/xml");
               res.end(result[1]);
               CacheXMLDOMCauHoi = result[0];

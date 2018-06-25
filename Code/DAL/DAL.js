@@ -100,32 +100,9 @@ module.exports.cauHoiWrite = (pathData, xmlDomCauHoi, cauHoi, dsDapAn, dapAn, ma
   return [xmlDomCauHoi, xmlres];
 }
 
-module.exports.cauHoiUpdate = (pathData, xmlDomCauHoi, maCauHoi, daDuyet, maNguoiDang, maNguoiDuyet, cauHoi, dsDapAn, dapAn) => {
-  let ds_Dap_An = dsDapAn.map((item, index) => {
-    return {
-      $: {
-        'Ma_dap_an': index
-      },
-      _: item
-    }
-  })
-  
-  let cauHoiMoi = {
-    $: {
-      'Ma_cau_hoi': maCauHoi,
-      'Dap_an': dapAn,
-      'Da_duyet': daDuyet,
-      'Ma_nguoi_dang': maNguoiDang,
-      'Ma_nguoi_duyet': maNguoiDuyet
-    },
-    DE: [cauHoi],
-    DS_DAP_AN: [{
-      DAP_AN: ds_Dap_An
-    }],
-  }
-
+module.exports.cauHoiUpdate = (pathData, xmlDomCauHoi, cauHoiMoi) => {
   for(let i = 0; i < xmlDomCauHoi.DS_CAU_HOI.CAU_HOI.length; i++){
-    if(xmlDomCauHoi.DS_CAU_HOI.CAU_HOI[i].$.Ma_cau_hoi == maCauHoi){
+    if(xmlDomCauHoi.DS_CAU_HOI.CAU_HOI[i].$.Ma_cau_hoi == cauHoiMoi.CAU_HOI.$.Ma_cau_hoi){
       xmlDomCauHoi.DS_CAU_HOI.CAU_HOI[i] = cauHoiMoi;
       break;
     }

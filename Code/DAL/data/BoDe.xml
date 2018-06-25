@@ -38,4 +38,18 @@
       <CAU Ma_cau_hoi="87"/>
     </DS_CAU_HOI>
   </DE>
+  <DE Ma_de="4" Ma_nguoi_tao="12">
+    <DS_CAU_HOI>
+      <CAU Ma_cau_hoi="1"/>
+      <CAU Ma_cau_hoi="2"/>
+      <CAU Ma_cau_hoi="3"/>
+    </DS_CAU_HOI>
+  </DE>
+  <DE Ma_de="5" Ma_nguoi_tao="12">
+    <DS_CAU_HOI>
+      <CAU Ma_cau_hoi="1"/>
+      <CAU Ma_cau_hoi="2"/>
+      <CAU Ma_cau_hoi="3"/>
+    </DS_CAU_HOI>
+  </DE>
 </DS_BO_DE>

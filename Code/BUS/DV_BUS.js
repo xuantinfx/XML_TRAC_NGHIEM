@@ -1,4 +1,5 @@
 const http = require("http");
+const qs = require("querystring");
 const { port, URL_DAL, access_token } = require("./config.js");
 const URL = require("url");
 const BUS = require("./BUS.js");
@@ -72,6 +73,63 @@ http
           break;
       }
     } else if (req.method.toUpperCase() == "POST") {
+      switch (req.url) {
+        case '/them-cau-hoi':
+        {
+          let body = '';
+          req.on('data', function (data) {
+            body += data;
+
+            if (body.length > 1e6)
+              req.connection.destroy();
+          });
+
+          req.on('end', function() {
+            let cauHoiMoi = qs.parse(body);
+            console.log(cauHoiMoi)
+            let result = BUS.themCauHoi(Cache[cauHoi], cauHoiMoi);
+          })
+          break
+        }
+        case '/duyet-cau-hoi':
+        {
+          let body = '';
+          req.on('data', function (data) {
+            body += data;
+
+            if (body.length > 1e6)
+              req.connection.destroy();
+          });
+
+          req.on('end', function() {
+            console.log(typeof(body), body);
+            let postdata = qs.parse(body);
+            let result = BUS.duyetCauHoi(Cache[cauHoi], postdata);
+          })
+          break
+        }
+        case '/tao-bo-de':
+        {
+          let body = '';
+          req.on('data', function (data) {
+            body += data;
+
+            if (body.length > 1e6)
+              req.connection.destroy();
+          });
+
+          req.on('end', function() {
+            console.log(typeof(body), body);
+            let postdata = qs.parse(body);
+            postdata.maCacCauHoi = postdata.maCacCauHoi.split(';')
+            console.log(postdata)
+            let result = BUS.taoBoDe(Cache[cauHoi], postdata);
+          })
+          break
+        }
+        default:
+          break
+      }
       return res.end();
     }
   })
