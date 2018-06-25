@@ -10,6 +10,7 @@ http
     res.mySend = (path) => {
         fs.readFile(path,(err, data) => {
             if(err) {
+                //console.log(err);
                 res.statusCode = 404;
                 res.end();
             }
@@ -36,13 +37,37 @@ http
       //Decode URL
       const { pathname, query } = URL.parse(req.url, true);
       //API
-      res.mySend(__dirname + query.file);
       switch (pathname) {
-        
+        case "/khach-tham-quan/tu-ren-luyen-tung-cau": {
+          res.setHeader("Content-type", "text/html");
+          res.mySend(__dirname + "/views/Tu_ren_luyen_theo_cau_hoi.html");
+          break;
+        }
+        case "/khach-tham-quan/tu-ren-luyen-bo-de": {
+          res.setHeader("Content-type", "text/html");
+          res.mySend(__dirname + "/views/Tu_ren_luyen_theo_bo_de.html");
+          break;
+        }
+        case "/giao-vien": {
+          res.setHeader("Content-type", "text/html");
+          res.mySend(__dirname + "/views/Giao_vien.html");
+          break;
+        }
+        case "/quan-ly": {
+          res.setHeader("Content-type", "text/html");
+          res.mySend(__dirname + "/views/Quan_ly.html");
+          break;
+        }
+        default:
+        {
+          res.mySend(__dirname +"/public" + pathname);
+          break;
+        }
       }
     } else if (req.method.toUpperCase() == "POST") {
-      return res.end();
+      res.end();
     }
+    
   })
   .listen(port, server => {
     console.log("server GUI listen on", port);
