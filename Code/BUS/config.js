@@ -1,6 +1,7 @@
 module.exports = {
     port: 3001,
     URL_DAL: "http://localhost:3002",
+    URL_SECURITY: "http://localhost:3003",
     API: {
         BoDe: {
             read: '/bo-de/read',

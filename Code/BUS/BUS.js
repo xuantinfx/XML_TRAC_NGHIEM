@@ -1,15 +1,44 @@
 const request = require("request");
 const xml2js = require("xml2js");
-const {URL_DAL, API, Tag, Atrib, DAL_access_token} = require('./config')
+const {
+  URL_DAL,
+  API,
+  Tag,
+  Atrib,
+  DAL_access_token,
+  URL_SECURITY
+} = require('./config')
 
-const boDe = 0, cauHoi = 1, nguoiDung = 2;
+const boDe = 0,
+  cauHoi = 1,
+  nguoiDung = 2;
 
 //const TAG_access_token = "access_token";
 
+module.exports.checkLogin = (token) => {
+  return new Promise((resole, reject) => {
+    request({
+        uri: URL_SECURITY + "/check-login",
+        method: "POST",
+        body: JSON.stringify({
+          token
+        })
+      },
+      (err, res, body) => {
+        if (err) {
+          console.log(err);
+          return resole(false);
+        } else {
+          resole(body);
+        }
+      }
+    );
+  })
+}
+
 const readDataFromDal = (url) => {
   return new Promise((resolve, reject) => {
-    request(
-      {
+    request({
         headers: {
           //insert header later
           "access_token": DAL_access_token
@@ -20,9 +49,8 @@ const readDataFromDal = (url) => {
       (err, res, body) => {
         if (err) {
           return reject(err);
-        }
-        else{
-          if(body == '') {
+        } else {
+          if (body == '') {
             return reject(new Error('respone data is empty'))
           }
           return resolve(body);
@@ -37,17 +65,17 @@ const readAllDAL = () => {
     let pdataBoDe = readDataFromDal(URL_DAL + API.BoDe.read);
     let pdataCauHoi = readDataFromDal(URL_DAL + API.CauHoi.read);
     let pdataNguoiDung = readDataFromDal(URL_DAL + API.NguoiDung.read);
-    
+
     Promise.all([pdataBoDe, pdataCauHoi, pdataNguoiDung])
-    .then(value => {
-      let allData = [];
-      allData[boDe] = value[0];
-      allData[cauHoi] = value[1];
-      allData[nguoiDung] = value[2];
-      return resolve(allData);
-    }).catch(err => {
-      return reject(err);
-    })
+      .then(value => {
+        let allData = [];
+        allData[boDe] = value[0];
+        allData[cauHoi] = value[1];
+        allData[nguoiDung] = value[2];
+        return resolve(allData);
+      }).catch(err => {
+        return reject(err);
+      })
   });
 };
 
@@ -66,20 +94,20 @@ const parseXML = (xml) => {
 const parseStringXML = xmls => {
   return new Promise((resolve, reject) => {
     let listPromise = [];
-    for(let i = 0;i < xmls.length; i++) {
+    for (let i = 0; i < xmls.length; i++) {
       listPromise.push(parseXML(xmls[i]));
     }
     Promise.all(listPromise)
-    .then(value => {
-      return resolve(value);
-    })
-    .catch(err => {
-      return reject(err);
-    })
+      .then(value => {
+        return resolve(value);
+      })
+      .catch(err => {
+        return reject(err);
+      })
   });
 };
 
-module.exports.InitCache = async function(URL_DAL, cb) {
+module.exports.InitCache = async function (URL_DAL, cb) {
   let Cache = {};
   try {
     //Lấy toàn bộ dữ liệu từ DAL
@@ -102,13 +130,13 @@ module.exports.layCauHoi = (XMLDOMCauHoi, maCauHoi) => {
   let result = {};
   let listCauHoi = XMLDOMCauHoi.DS_CAU_HOI.CAU_HOI;
   let i;
-  for(i = 0; i < listCauHoi.length; i++) {
-    if(maCauHoi == listCauHoi[i].$.Ma_cau_hoi) {
+  for (i = 0; i < listCauHoi.length; i++) {
+    if (maCauHoi == listCauHoi[i].$.Ma_cau_hoi) {
       result.CAU_HOI = listCauHoi[i];
       break;
     }
   }
-  if(i >= listCauHoi.length) {
+  if (i >= listCauHoi.length) {
     return "";
   }
   return (new xml2js.Builder).buildObject(result)
@@ -127,8 +155,8 @@ module.exports.layBoDe = (XMLDOMBoDe, maDe) => {
   let listBoDe = XMLDOMBoDe.DS_BO_DE.DE;
   let result = {};
   let i = 0;
-  for(i = 0; i < listBoDe.length; i++) {
-    if(listBoDe[i].$.Ma_de == maDe) {
+  for (i = 0; i < listBoDe.length; i++) {
+    if (listBoDe[i].$.Ma_de == maDe) {
       result.DE = listBoDe[i];
       break;
     }
@@ -139,8 +167,7 @@ module.exports.layBoDe = (XMLDOMBoDe, maDe) => {
 module.exports.themCauHoi = async (XMLDOMCauHoi, data) => {
   return new Promise((resolve, reject) => {
     console.log(data)
-    request(
-      {
+    request({
         uri: URL_DAL + '/cau-hoi/write',
         method: 'POST',
         json: data
@@ -148,9 +175,8 @@ module.exports.themCauHoi = async (XMLDOMCauHoi, data) => {
       (err, res, body) => {
         if (err) {
           return reject(err);
-        }
-        else{
-          if(body == '') {
+        } else {
+          if (body == '') {
             return reject(new Error('respone data is empty'))
           }
           return resolve(body);
@@ -165,9 +191,9 @@ module.exports.duyetCauHoi = async (XMLDOMCauHoi, data) => {
   let maCauHoi = data.maCauHoi;
   let listCauHoi = XMLDOMCauHoi.DS_CAU_HOI.CAU_HOI;
   let i;
-  for(i = 0; i < listCauHoi.length; i++) {
-    console.log(typeof(maCauHoi), typeof(listCauHoi[i].$.Ma_cau_hoi))
-    if(maCauHoi == listCauHoi[i].$.Ma_cau_hoi) {
+  for (i = 0; i < listCauHoi.length; i++) {
+    console.log(typeof (maCauHoi), typeof (listCauHoi[i].$.Ma_cau_hoi))
+    if (maCauHoi == listCauHoi[i].$.Ma_cau_hoi) {
       result.CAU_HOI = listCauHoi[i];
       break;
     }
@@ -178,8 +204,7 @@ module.exports.duyetCauHoi = async (XMLDOMCauHoi, data) => {
   cauHoi.CAU_HOI.$.Da_duyet = 'true'
   return new Promise((resolve, reject) => {
     console.log(data)
-    request(
-      {
+    request({
         uri: URL_DAL + '/cau-hoi/update',
         method: 'POST',
         json: cauHoi
@@ -187,9 +212,8 @@ module.exports.duyetCauHoi = async (XMLDOMCauHoi, data) => {
       (err, res, body) => {
         if (err) {
           return reject(err);
-        }
-        else{
-          if(body == '') {
+        } else {
+          if (body == '') {
             return reject(new Error('respone data is empty'))
           }
           return resolve(body);
@@ -203,9 +227,8 @@ module.exports.duyetCauHoi = async (XMLDOMCauHoi, data) => {
 module.exports.taoBoDe = async (XMLDOMCauHoi, data) => {
   return new Promise((resolve, reject) => {
     data.maNguoiTao = "12";
-    console.log(data,'-------')
-    request(
-      {
+    console.log(data, '-------')
+    request({
         uri: URL_DAL + '/bo-de/write',
         method: 'POST',
         json: data
@@ -213,9 +236,8 @@ module.exports.taoBoDe = async (XMLDOMCauHoi, data) => {
       (err, res, body) => {
         if (err) {
           return reject(err);
-        }
-        else{
-          if(body == '') {
+        } else {
+          if (body == '') {
             return reject(new Error('respone data is empty'))
           }
           return resolve(body);

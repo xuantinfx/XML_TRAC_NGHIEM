@@ -1,6 +1,10 @@
 const http = require("http");
 const qs = require("querystring");
-const { port, URL_DAL, access_token } = require("./config.js");
+const {
+  port,
+  URL_DAL,
+  access_token
+} = require("./config.js");
 const URL = require("url");
 const BUS = require("./BUS.js");
 const boDe = 0,
@@ -21,17 +25,39 @@ BUS.InitCache(URL_DAL, (err, result) => {
 
 //Khởi tạo server
 http
-  .createServer((req, res) => {
+  .createServer(async (req, res) => {
     console.log(req.method, req.url);
+
     res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Credentials", "true");
+    res.setHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
+    res.setHeader("Access-Control-Allow-Headers", "Authorization, Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
+
+    //res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Content-type", "text/xml");
 
-    //Kiểm tra đơn giản bằng cách kiểm tra access_token
-    //Sau này phức tạp hơn phải xây dựng 1 class đảm nhận việc này
-    // if(req.headers.access_token != access_token){
-    //   //Nếu access_token không hợp lệ thì không cho sử dụng hàm bên dưới
-    //   return res.end('deny');
-    // }
+    let user = {
+      isLogin: false,
+      laGiaoVien: false,
+      laQuanLy: false
+    }
+    //Kiểm tra đã đăng nhập chưa?
+    //Kiểm tra có phải là giáo viên hay quản lý
+    if (req.headers.authorization) {
+      let resultCheckLogin = await BUS.checkLogin(req.headers.authorization);
+      if (resultCheckLogin != false) {
+        resultCheckLogin = JSON.parse(resultCheckLogin);
+        if (resultCheckLogin.status != "error") {
+          user.isLogin = true;
+          if (resultCheckLogin.data.type == 'giáo viên') {
+            user.laGiaoVien = true;
+          } else {
+            user.laQuanLy = true;
+          }
+        }
+      }
+      console.log(user)
+    }
 
     //Kiểm tra Cache đã xong chưa
     if (Cache == undefined) {
@@ -41,7 +67,10 @@ http
     //Method GET
     if (req.method.toUpperCase() == "GET") {
       //Decode URL
-      const { pathname, query } = URL.parse(req.url, true);
+      const {
+        pathname,
+        query
+      } = URL.parse(req.url, true);
       //API
       switch (pathname) {
         case "/lay-cau-hoi":
@@ -75,62 +104,68 @@ http
     } else if (req.method.toUpperCase() == "POST") {
       switch (req.url) {
         case '/them-cau-hoi':
-        {
-          let body = '';
-          req.on('data', function (data) {
-            body += data;
+          {
+            if(!user.isLogin) {
+              res.end("need login")
+              return;
+            }
+            let body = '';
+            req.on('data', function (data) {
+              body += data;
 
-            if (body.length > 1e6)
-              req.connection.destroy();
-          });
-          req.on('end', function() {
-            console.log(body, '---------')
-            
-            let cauHoiMoi = qs.parse(body);
-            console.log(cauHoiMoi)
-            let result = BUS.themCauHoi(Cache[cauHoi], cauHoiMoi);
-          })
-          break
-        }
+              if (body.length > 1e6)
+                req.connection.destroy();
+            });
+            req.on('end', function () {
+              console.log(body, '---------')
+
+              let cauHoiMoi = qs.parse(body);
+              console.log(cauHoiMoi)
+              let result = BUS.themCauHoi(Cache[cauHoi], cauHoiMoi);
+            })
+            break
+          }
         case '/duyet-cau-hoi':
-        {
-          let body = '';
-          req.on('data', function (data) {
-            body += data;
+          {
+            let body = '';
+            req.on('data', function (data) {
+              body += data;
 
-            if (body.length > 1e6)
-              req.connection.destroy();
-          });
+              if (body.length > 1e6)
+                req.connection.destroy();
+            });
 
-          req.on('end', function() {
-            console.log(typeof(body), body);
-            let postdata = qs.parse(body);
-            let result = BUS.duyetCauHoi(Cache[cauHoi], postdata);
-          })
-          break
-        }
+            req.on('end', function () {
+              console.log(typeof (body), body);
+              let postdata = qs.parse(body);
+              let result = BUS.duyetCauHoi(Cache[cauHoi], postdata);
+            })
+            break
+          }
         case '/tao-bo-de':
-        {
-          let body = '';
-          req.on('data', function (data) {
-            body += data;
+          {
+            let body = '';
+            req.on('data', function (data) {
+              body += data;
 
-            if (body.length > 1e6)
-              req.connection.destroy();
-          });
+              if (body.length > 1e6)
+                req.connection.destroy();
+            });
 
-          req.on('end', function() {
-            console.log(typeof(body), body);
-            let postdata = qs.parse(body);
-            postdata.maCacCauHoi = postdata.maCacCauHoi.split(';')
-            console.log(postdata)
-            let result = BUS.taoBoDe(Cache[cauHoi], postdata);
-          })
-          break
-        }
+            req.on('end', function () {
+              console.log(typeof (body), body);
+              let postdata = qs.parse(body);
+              postdata.maCacCauHoi = postdata.maCacCauHoi.split(';')
+              console.log(postdata)
+              let result = BUS.taoBoDe(Cache[cauHoi], postdata);
+            })
+            break
+          }
         default:
           break
       }
+    }
+    else {
       return res.end();
     }
   })

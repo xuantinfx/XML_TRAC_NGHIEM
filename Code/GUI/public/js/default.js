@@ -16,10 +16,14 @@ var requestApi = (uri, method, data) => {
             }
             data = null;
         }
+        let token = window.localStorage.getItem("token");
         $.ajax({
             method: method,
             url: BUS_API + uri,
-            data: data
+            data: data,
+            headers: {
+                Authorization: token
+            }
         }).done((result) => {
             resole(result);
         })
