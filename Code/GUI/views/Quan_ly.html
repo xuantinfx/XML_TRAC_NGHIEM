@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Quản lý - Xem câu hỏi - Duyệt câu hỏi - Tạo đề</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-     <style>
+    <style>
         .btn1 {
             padding: 10px;
         }
@@ -14,7 +15,8 @@
         .dropdown-list {
             overflow-y: auto !important;
             max-height: 200px;
-        }    
+        }
+
         div {
             box-sizing: border-box;
         }
@@ -39,199 +41,222 @@
         }
     </style>
 </head>
+
 <body class="bg-dark">
     <nav class="navbar navbar-expand-lg navbar-light bg-header" style="background-color: #5824a0">
-  <a class="navbar-brand" href="#">Admin</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+        <a class="navbar-brand" href="#">Admin</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Log out <span class="sr-only">(current)</span></a>
-      </li>
-     
-    
-    </ul>
-   
-  </div>
-</nav>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Log out
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
 
-<div style="width: 1000px;" class="container-fluid bg-light" align="center">
-    <table>
-        <tr>
-            <td rowspan="2" style="vertical-align: top">
-                <div style="background-color:lightblue; width: 400px">
-                  <div class="card card-header bg-info" align="center" style="color: white; font-size: 30px">
-                      Duyệt câu hỏi
-                  </div>
 
-                  <div class="form-group card card-inverse">
-                    <label for="cau_hoi">Câu hỏi:</label>
-                    <input type="text" class="form-control" id="cau_hoi" value='Đèn đỏ dừng bao nhiêu giây?' disabled="true">
-                  </div>
-                  <div class="form-group card card-inverse">
-                    <label for="phuong_an_a">A:</label>
-                    <input type="text" class="form-control" id="phuong_an_a" value='30s' disabled="true">
-                  </div>
-                  <div class="form-group card card-inverse">
-                    <label for="phuong_an_b">B:</label>
-                    <input type="text" class="form-control" id="phuong_an_b" value='40s' disabled="true">
-                  </div>
-                  <div class="form-group card card-inverse">
-                    <label for="phuong_an_c">C:</label>
-                    <input type="text" class="form-control" id="phuong_an_c" value='50s' disabled="true">
-                  </div>
-                  <div class="form-group card card-inverse">
-                    <label for="phuong_an_d">D:</label>
-                    <input type="text" class="form-control" id="phuong_an_d" value='60s' disabled="true">
-                  </div>
-                  <div align="center">
-                  <span>Đáp án</span>
-                  <select disabled="true">
-                      <option value="A">A</option>
-                      <option value="B">B</option>
-                      <option value="C">C</option>
-                      <option value="D">D</option>
-                  </select>
-                  </div>
-                  <div align="center" style="background-color: lightblue">
-                      <br>
-                      <div>
-                        <button class="btn btn-primary">Sửa</button>
-                        <button class="btn btn-success">Duyệt </button>
-                        <button class="btn btn-danger">Không duyệt</button>
-                      </div>
-                      <br>
-                      <div class="card card-info">
-                        <div class="bg-info">
-                          <br>
-                          <button  class="btn previous">&laquo; Trước</button>
-                          <button class="btn next">Sau &raquo;</button>
-                          <br>
-                          <br>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div style="width: 1000px;" class="container-fluid bg-light" align="center">
+        <table>
+            <tr>
+                <td rowspan="2" style="vertical-align: top">
+                    <div style="background-color:lightblue; width: 400px">
+                        <div class="card card-header bg-info" align="center" style="color: white; font-size: 30px">
+                            Duyệt câu hỏi
                         </div>
-                      </div>
-                  </div>
-                </div>
-            </td>
-            <td colspan="2" style="vertical-align: top">
-                <div class="card card-header bg-info" style="font-size: 30px; color: white" align="center">Tạo đề
-                </div>
+
+                        <div class="form-group card card-inverse">
+                            <label id="cau_hoi_duyet" ma_cau_hoi="">Câu hỏi:</label>
+                            <input type="text" class="form-control" id="cau_hoi" value='Đèn đỏ dừng bao nhiêu giây?' disabled="true">
+                        </div>
+                        <div class="form-group card card-inverse">
+                            <label id="phuong_an_a">A:</label>
+                            <input type="text" class="form-control" id="phuong_an_a" value='30s' disabled="true">
+                        </div>
+                        <div class="form-group card card-inverse">
+                            <label for="phuong_an_b">B:</label>
+                            <input type="text" class="form-control" id="phuong_an_b" value='40s' disabled="true">
+                        </div>
+                        <div class="form-group card card-inverse">
+                            <label for="phuong_an_c">C:</label>
+                            <input type="text" class="form-control" id="phuong_an_c" value='50s' disabled="true">
+                        </div>
+                        <div class="form-group card card-inverse">
+                            <label for="phuong_an_d">D:</label>
+                            <input type="text" class="form-control" id="phuong_an_d" value='60s' disabled="true">
+                        </div>
+                        <div align="center">
+                            <span>Đáp án</span>
+                            <select disabled="true">
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                            </select>
+                        </div>
+                        <div align="center" style="background-color: lightblue">
+                            <br>
+                            <div>
+                                <button class="btn btn-primary" onClick()="onDuyet()">Duyệt </button>
+                            </div>
+                            <br>
+                            <div class="card card-info">
+                                <div class="bg-info">
+                                    <br>
+                                    <button class="btn previous">&laquo; Trước</button>
+                                    <button class="btn next">Sau &raquo;</button>
+                                    <br>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td colspan="2" style="vertical-align: top">
+                    <div class="card card-header bg-info" style="font-size: 30px; color: white" align="center">Tạo đề
+                    </div>
+
+                    <div align="right" style="background-color: #fff1aa">
+                        <button class="btn btn-primary btn-lg">Tạo</button>
+                    </div>
+                </td>
+            </tr>
+            <tr style="background-color: #fff1aa">
+                <td rowspan="2" style="vertical-align: top">
+                    <div id="bo-cau-hoi-1">
+                    </div>
+                </td>
+                <td rowspan="2" style="vertical-align: top">
+                    <div id="bo-cau-hoi-2">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="vertical-align: top">
+                    <div class="dropdown-list" style="background-color: lightblue; width: 400px; max-width: 1000px" align="center">
+                        <label class="bg-info card card-header" style="color: white; width: 100%; font-size: 30px">Xem câu hỏi</label>
+                        <input id="ma_cau_hoi_xem" list="bo-cau-hoi-xem" class="form-inline form-control" placeholder="Chọn câu hỏi">
+                        <br>
+                        <datalist id="bo-cau-hoi-xem">
+                            <option value="Câu 1">
+                            <option value="Câu 2">
+                            <option value="Câu 3">
+                            <option value="Câu 4">
+                            <option value="Câu 5">
+                            <option value="Câu 6">
+                            <option value="Câu 7">
+                            <option value="Câu 8">
+                            <option value="Câu 9">
+                            <option value="Câu 10">
+                            <option value="Câu 11">
+                            <option value="Câu 12">
+                            <option value="Câu 13">
+                            <option value="Câu 14">
+                            <option value="Câu 15">
+                            <option value="Câu 16">
+                            <option value="Câu 17">
+                            <option value="Câu 18">
+                            <option value="Câu 19">
+                            <option value="Câu 20">
+                        </datalist>
+                        <div align="right">
+                            <button class="btn btn-primary" onClick="onViewQuestion()">Xem</button>
+                        </div>
+                    </div>
+                    <div style="background-color: #d5dbe5">
+                        <h5 id="cau_hoi_xem">Câu 1: Đèn vàng có màu gì?</h5>
+                        <div>
+                            <div class="clearfix">
+                                <input id="input_0_xem" type="radio" name="qs7" id="qs70" disabled="true">
+                                <label id="da_0_xem" for="qs70">Xanh</label>
+                            </div>
+                            <div class="clearfix">
+                                <input id="input_1_xem" type="radio" name="qs7" id="qs71" disabled="true">
+                                <label id="da_1_xem" for="qs71">Đỏ</label>
+                            </div>
+                            <div class="clearfix">
+                                <input id="input_2_xem" type="radio" name="qs7" id="qs72" disabled="true">
+                                <label id="da_2_xem" for="qs72">Tím</label>
+                            </div>
+                            <div class="clearfix">
+                                <input id="input_3_xem" type="radio" name="qs7" id="qs73" disabled="true" checked="true">
+                                <label id="da_3_xem" for="qs70">Vàng</label>
+                            </div>
+                        </div>
+                        <div align="center" class="card card-info">
+                            <div class="bg-info">
+                                <br>
+                                <button class="btn previous">&laquo; Trước</button>
+                                <button class="btn next">Sau &raquo; </button>
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="../public/js/default.js"></script>
+    <script>
+        for (let i = 0; i < 20; ++i) {
+            let div = document.createElement('div')
+            div.id = 'cau_' + i
+            let label = document.createElement('label')
+            label.innerHTML = 'Câu ' + (i + 1)
+            label.setAttribute('style', 'width: 100%')
+            let input = document.createElement('input')
+            let datalist = document.createElement('datalist')
+            datalist.id = 'list-cau-hoi'
+            for (let j = 0; j < 20; ++j) {
+                let option = document.createElement('option')
+                option.setAttribute('value', 'Câu ' + (j + 1))
+
+                datalist.appendChild(option)
+            }
+            input.setAttribute('list', 'list-cau-hoi')
+            input.setAttribute('placeholder', 'Chọn 1 câu hỏi trong bộ đề đã có')
+            input.setAttribute('class', 'form-control form-inline')
+            div.appendChild(label)
+            div.appendChild(input)
+            div.appendChild(datalist)
+            if (i < 10) {
+                document.getElementById('bo-cau-hoi-1').appendChild(div)
+            } else {
+                document.getElementById('bo-cau-hoi-2').appendChild(div)
+            }
+        }
+
+        function onViewQuestion() {
+            let maCauHoi = document.getElementById('ma_cau_hoi_xem').value
+            if (maCauHoi[0] == 'C') maCauHoi = maCauHoi.split(' ')[1]
+            let params = {
+                'maCauHoi': maCauHoi
+            }
+            requestApi('/lay-cau-hoi', 'GET', params).then(data => {
+                document.getElementById('cau_hoi_xem').innerHTML = 'Câu ' + maCauHoi + ': ' + data.getElementsByTagName('DE')[0].innerHTML
+                for (let i = 0; i < 4; ++i) {
+                    document.getElementById('da_' + i + '_xem').innerHTML = data.getElementsByTagName('DAP_AN')[i].innerHTML
+                }
                     
-                <div align="right" style="background-color: #fff1aa">
-                    <button class="btn btn-primary btn-lg">Tạo</button>
-                </div>
-            </td>
-        </tr>
-        <tr style="background-color: #fff1aa">
-            <td rowspan="2" style="vertical-align: top">
-              <div id="bo-cau-hoi-1">
-              </div>
-            </td>
-            <td rowspan="2" style="vertical-align: top">
-              <div id="bo-cau-hoi-2">
-              </div>
-            </td>
-        </tr>
-       
-        <tr>
-            <td style="vertical-align: top">
-                <div class="dropdown-list" style="background-color: lightblue; width: 400px; max-width: 1000px" align="center">
-                <label class="bg-info card card-header" style="color: white; width: 100%; font-size: 30px">Xem câu hỏi</label>
-                <input list="bo-cau-hoi-xem" class="form-inline form-control" placeholder="Chọn câu hỏi">
-                <br>
-                <datalist id="bo-cau-hoi-xem" >
-                  <option value="Câu 1">
-                  <option value="Câu 2">
-                  <option value="Câu 3">
-                  <option value="Câu 4">
-                  <option value="Câu 5">
-                  <option value="Câu 6">
-                  <option value="Câu 7">
-                  <option value="Câu 8">
-                  <option value="Câu 9">
-                  <option value="Câu 10">
-                  <option value="Câu 11">
-                  <option value="Câu 12">
-                  <option value="Câu 13">
-                  <option value="Câu 14">
-                  <option value="Câu 15">
-                  <option value="Câu 16">
-                  <option value="Câu 17">
-                  <option value="Câu 18">
-                  <option value="Câu 19">
-                  <option value="Câu 20">
-                </datalist>
-                <div align="right">
-                  <button class="btn btn-primary">Xem</button>
-                </div>
-                </div>
-                <div style="background-color: #d5dbe5">
-                    <h5>Câu 1: Đèn vàng có màu gì?</h5>
-                     <div>
-                        <div class="clearfix">
-                            <input type="radio" name="qs7" id="qs70" disabled="true">
-                            <label for="qs70">Xanh</label>
-                        </div>
-                        <div class="clearfix">
-                            <input type="radio" name="qs7" id="qs71" disabled="true">
-                            <label for="qs71">Đỏ</label>
-                        </div>
-                        <div class="clearfix">
-                            <input type="radio" name="qs7" id="qs72" disabled="true">
-                            <label for="qs72">Tím</label>
-                        </div>
-                        <div class="clearfix">
-                            <input type="radio" name="qs7" id="qs73" disabled="true" checked="true">
-                            <label for="qs70">Vàng</label>
-                        </div>
-                    </div>
-                    <div align="center" class="card card-info">
-                        <div class="bg-info">
-                          <br>
-                          <button class="btn previous">&laquo; Trước</button>
-                          <button class="btn next">Sau &raquo; </button>
-                          <br>
-                          <br>
-                        </div>
-                    </div>
-                </div>
-            </td>
-        </tr>
-       
-    </table>
-</div>
-<script>
-  for (let i = 0; i < 20; ++i) {
-    let div = document.createElement('div')
-    div.id = 'cau_' + i
-    let label = document.createElement('label')
-    label.innerHTML = 'Câu ' + (i + 1)
-    label.setAttribute('style', 'width: 100%')
-    let input = document.createElement('input')
-    let datalist = document.createElement('datalist')
-    datalist.id = 'list-cau-hoi'
-    for (let j = 0; j < 20; ++j) {
-      let option = document.createElement('option')
-      option.setAttribute('value', 'Câu ' + (j + 1))
-
-      datalist.appendChild(option)
-    }
-    input.setAttribute('list', 'list-cau-hoi')
-    input.setAttribute('placeholder', 'Chọn 1 câu hỏi trong bộ đề đã có')
-    input.setAttribute('class', 'form-control form-inline')
-    div.appendChild(label)
-    div.appendChild(input)
-    div.appendChild(datalist)
-    if (i < 10) {
-        document.getElementById('bo-cau-hoi-1').appendChild(div)
-    } else {
-        document.getElementById('bo-cau-hoi-2').appendChild(div)
-    }
-  }
-</script>
+                let dapAn = data.getElementsByTagName('CAU_HOI')[0].getAttribute('Dap_an')
+                document.getElementById('input_' + dapAn + '_xem').setAttribute('checked', 'true')
+            })
+        }
+    </script>
 </body>
 
 </html>
