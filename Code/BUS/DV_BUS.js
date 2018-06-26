@@ -58,7 +58,6 @@ http
           }
         }
       }
-      console.log(user)
     }
 
     //Kiểm tra Cache đã xong chưa

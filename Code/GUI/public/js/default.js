@@ -1,6 +1,6 @@
 const BUS_API = "http://localhost:3001";
 
-var requestApi = (uri, method, data) => {
+var requestApi = (uri, method, data, BaseURL) => {
     return new Promise((resole, reject) => {
         if (method.toLowerCase() == 'get' && data) {
             uri += "?";
@@ -16,18 +16,23 @@ var requestApi = (uri, method, data) => {
             }
             data = null;
         }
+        if(typeof data == "object") {
+            data = JSON.stringify(data);
+        }
         let token = window.localStorage.getItem("token");
+        let url = BUS_API + uri;
+        if(BaseURL) {
+            url = BaseURL + uri;
+        }
         $.ajax({
             method: method,
-            url: BUS_API + uri,
+            url: url,
             data: data,
             headers: {
                 Authorization: token
             }
         }).done((result) => {
-            console.log(result)
             if(result == "need login") {
-                console.log(result)
                 window.location.href = "/login"
             }
             resole(result);

@@ -1,3 +1,4 @@
+const URL = require("url");
 const http = require('http')
 const qs = require("querystring");
 const {
@@ -40,6 +41,10 @@ http.createServer((req, res) => {
     console.log(req.method, req.url);
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Content-type", "text/json");
+    res.setHeader("Access-Control-Allow-Credentials", "true");
+    res.setHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
+    res.setHeader("Access-Control-Allow-Headers", "Authorization, Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
+
 
     //Method GET
     if (req.method.toUpperCase() == "GET") {
@@ -165,6 +170,8 @@ http.createServer((req, res) => {
             default:
                 break
         }
+    } else {
+        res.end();
     }
 }).listen(port, () => {
     console.log("Security listen on port", port);
