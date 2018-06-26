@@ -149,6 +149,7 @@
             <label for="password">Mật khẩu</label>
             <input type="password" id="password" name="password" class="password" />
         </div>
+        <div class="inputGroup" style="color: rgb(221, 74, 74)" id="error"></div>
         <div class="inputGroup inputGroup3">
             <button type="submit">Đăng Nhập</button>
         </div>
@@ -163,9 +164,21 @@
     <script>
         $("#form-login").submit((e)=>{
             e.preventDefault();
-            requestApi("/login","post",{ten:"TinTin", matKhau: "lol"}, "http://localhost:3003")
+            let ten = $("#email").val();
+            let matKhau = $("#password").val();
+            requestApi("/login","post",{ten, matKhau}, "http://localhost:3003")
             .then(data => {
-                console.log(data);
+                if(data.status == "success") {
+                    localStorage.setItem("token", data.data.token);
+                    setCookie("token",data.data.token, 30);
+                    if(data.data.data.type == 'giáo viên')
+                        location.href = "/giao-vien"
+                    else 
+                        location.href = "/quan-ly"
+                }
+                else {
+                    $("#error").text(data.data)
+                }
             })
         })
     </script>
