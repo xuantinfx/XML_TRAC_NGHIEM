@@ -83,8 +83,9 @@ http
             if (body.length > 1e6)
               req.connection.destroy();
           });
-
           req.on('end', function() {
+          console.log(body, '---------')
+            
             let cauHoiMoi = qs.parse(body);
             console.log(cauHoiMoi)
             let result = BUS.themCauHoi(Cache[cauHoi], cauHoiMoi);
