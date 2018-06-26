@@ -2,7 +2,8 @@ const request = require('request')
 const jwt = require('jsonwebtoken');
 const {
     DAL_URL,
-    secretkey
+    secretkey,
+    DAL_access_token
 } = require('./config')
 const xml2js = require('xml2js')
 
@@ -25,9 +26,11 @@ module.exports.requestApi = (uri, method, data) => {
             data = JSON.stringify(data);
         }
         request({
+            headers: {
+                "access_token": DAL_access_token
+              },
             uri: DAL_URL + uri,
             method: method,
-            headers: {},
             body: data
         }, (err, response, body) => {
             if (err) reject(err)

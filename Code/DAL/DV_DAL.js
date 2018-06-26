@@ -56,9 +56,10 @@ http
 
     //Trường hợp này chỉ sử dụng 1 key nên làm đơn giản như này
     //Sau này làm phức tạp hơn phải xây dựng 1 class để xử lí
-    // if (req.headers.access_token != access_token) {
-    //   return res.end('deny');
-    // }
+    if (req.headers.access_token != access_token) {
+      console.log("deny")
+      return res.end('deny');
+    }
 
     if (req.method == "GET" || req.method == "get") {
       //Decode URL

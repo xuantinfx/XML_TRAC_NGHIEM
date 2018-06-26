@@ -168,6 +168,10 @@ module.exports.themCauHoi = async (XMLDOMCauHoi, data) => {
   return new Promise((resolve, reject) => {
     console.log(data)
     request({
+        headers: {
+          //insert header later
+          "access_token": DAL_access_token
+        },
         uri: URL_DAL + '/cau-hoi/write',
         method: 'POST',
         json: data
@@ -205,6 +209,10 @@ module.exports.duyetCauHoi = async (XMLDOMCauHoi, data) => {
   return new Promise((resolve, reject) => {
     console.log(data)
     request({
+        headers: {
+          //insert header later
+          "access_token": DAL_access_token
+        },
         uri: URL_DAL + '/cau-hoi/update',
         method: 'POST',
         json: cauHoi
@@ -229,6 +237,10 @@ module.exports.taoBoDe = async (XMLDOMCauHoi, data) => {
     data.maNguoiTao = "12";
     console.log(data, '-------')
     request({
+        headers: {
+          //insert header later
+          "access_token": DAL_access_token
+        },
         uri: URL_DAL + '/bo-de/write',
         method: 'POST',
         json: data

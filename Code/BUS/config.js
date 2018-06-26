@@ -19,7 +19,6 @@ module.exports = {
             update: '/nguoi-dung/update'
         }
     },
-    access_token: "abcdefghi123123",
     DAL_access_token: "abcdef123123",
     Tag: {
         BoDe: {
