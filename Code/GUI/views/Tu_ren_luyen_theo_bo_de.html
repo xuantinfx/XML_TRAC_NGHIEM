@@ -135,7 +135,12 @@
                     </div> -->
                 </div>
                 <div class="row">
-                    <div class="col-3 offset-3 mt-5">
+                    <div class="col-9 text-center mt-3" id="ket-qua">
+                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 offset-3 mt-3">
                         <button id="nop-bai" class="btn btn-block btn-info">Nộp bài</button>
                     </div>
                 </div>
@@ -336,7 +341,7 @@
             $("#nop-bai").text("Làm lại")
             $("#nop-bai")[0].onclick = ()=> {
                 daNopBai = false;
-                debugger;
+                $("#ket-qua")[0].innerHTML = ""
                 loadBoDe(maBoDeDangChon);
             }
 
@@ -351,7 +356,11 @@
                     }
                 }
             }
-            
+            $("#ket-qua")[0].innerHTML = 
+            `
+                <h5>Số câu trả lời: ${soDapAnChon}/${dsCauHoi.length}</h5>
+                <h5>Số câu đúng: ${soDapAnDung}/${dsCauHoi.length}</h5>
+            `
         }
     </script>
 </body>
