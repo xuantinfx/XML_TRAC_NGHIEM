@@ -12,41 +12,41 @@
   <DE Ma_de="1" Ma_nguoi_tao="2">
     <DS_CAU_HOI>
       <CAU Ma_cau_hoi="1"/>
-      <CAU Ma_cau_hoi="9"/>
       <CAU Ma_cau_hoi="2"/>
-      <CAU Ma_cau_hoi="4"/>
+      <CAU Ma_cau_hoi="9"/>
       <CAU Ma_cau_hoi="5"/>
+      <CAU Ma_cau_hoi="4"/>
     </DS_CAU_HOI>
   </DE>
   <DE Ma_de="2" Ma_nguoi_tao="2">
     <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="1"/>
       <CAU Ma_cau_hoi="9"/>
+      <CAU Ma_cau_hoi="1"/>
+      <CAU Ma_cau_hoi="3"/>
       <CAU Ma_cau_hoi="2"/>
-      <CAU Ma_cau_hoi="4"/>
       <CAU Ma_cau_hoi="5"/>
     </DS_CAU_HOI>
   </DE>
   <DE Ma_de="3" Ma_nguoi_tao="4">
     <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="1"/>
-      <CAU Ma_cau_hoi="9"/>
-      <CAU Ma_cau_hoi="2"/>
-      <CAU Ma_cau_hoi="4"/>
       <CAU Ma_cau_hoi="5"/>
+      <CAU Ma_cau_hoi="6"/>
+      <CAU Ma_cau_hoi="7"/>
+      <CAU Ma_cau_hoi="1"/>
+      <CAU Ma_cau_hoi="2"/>
       <CAU Ma_cau_hoi="14"/>
-      <CAU Ma_cau_hoi="87"/>
+      <CAU Ma_cau_hoi="5"/>
     </DS_CAU_HOI>
   </DE>
   <DE Ma_de="4" Ma_nguoi_tao="4">
     <DS_CAU_HOI>
+      <CAU Ma_cau_hoi="6"/>
       <CAU Ma_cau_hoi="1"/>
-      <CAU Ma_cau_hoi="9"/>
-      <CAU Ma_cau_hoi="2"/>
-      <CAU Ma_cau_hoi="4"/>
+      <CAU Ma_cau_hoi="3"/>
       <CAU Ma_cau_hoi="5"/>
-      <CAU Ma_cau_hoi="14"/>
-      <CAU Ma_cau_hoi="87"/>
+      <CAU Ma_cau_hoi="7"/>
+      <CAU Ma_cau_hoi="4"/>
+      <CAU Ma_cau_hoi="1"/>
     </DS_CAU_HOI>
   </DE>
   <DE Ma_de="5" Ma_nguoi_tao="4">
@@ -57,7 +57,7 @@
       <CAU Ma_cau_hoi="4"/>
       <CAU Ma_cau_hoi="5"/>
       <CAU Ma_cau_hoi="14"/>
-      <CAU Ma_cau_hoi="87"/>
+      <CAU Ma_cau_hoi="12"/>
     </DS_CAU_HOI>
   </DE>
   <DE Ma_de="6" Ma_nguoi_tao="4">
@@ -68,7 +68,7 @@
       <CAU Ma_cau_hoi="4"/>
       <CAU Ma_cau_hoi="5"/>
       <CAU Ma_cau_hoi="14"/>
-      <CAU Ma_cau_hoi="87"/>
+      <CAU Ma_cau_hoi="13"/>
     </DS_CAU_HOI>
   </DE>
   <DE Ma_de="7" Ma_nguoi_tao="4">
@@ -79,7 +79,7 @@
       <CAU Ma_cau_hoi="4"/>
       <CAU Ma_cau_hoi="5"/>
       <CAU Ma_cau_hoi="14"/>
-      <CAU Ma_cau_hoi="87"/>
+      <CAU Ma_cau_hoi="10"/>
     </DS_CAU_HOI>
   </DE>
   <DE Ma_de="8" Ma_nguoi_tao="4">
@@ -90,7 +90,7 @@
       <CAU Ma_cau_hoi="4"/>
       <CAU Ma_cau_hoi="5"/>
       <CAU Ma_cau_hoi="14"/>
-      <CAU Ma_cau_hoi="87"/>
+      <CAU Ma_cau_hoi="9"/>
     </DS_CAU_HOI>
   </DE><DE Ma_de="9" Ma_nguoi_tao="4">
     <DS_CAU_HOI>
@@ -100,7 +100,7 @@
       <CAU Ma_cau_hoi="4"/>
       <CAU Ma_cau_hoi="5"/>
       <CAU Ma_cau_hoi="14"/>
-      <CAU Ma_cau_hoi="87"/>
+      <CAU Ma_cau_hoi="8"/>
     </DS_CAU_HOI>
   </DE><DE Ma_de="10" Ma_nguoi_tao="4">
     <DS_CAU_HOI>
@@ -110,7 +110,6 @@
       <CAU Ma_cau_hoi="4"/>
       <CAU Ma_cau_hoi="5"/>
       <CAU Ma_cau_hoi="14"/>
-      <CAU Ma_cau_hoi="87"/>
     </DS_CAU_HOI>
   </DE><DE Ma_de="11" Ma_nguoi_tao="4">
     <DS_CAU_HOI>
@@ -120,7 +119,6 @@
       <CAU Ma_cau_hoi="4"/>
       <CAU Ma_cau_hoi="5"/>
       <CAU Ma_cau_hoi="14"/>
-      <CAU Ma_cau_hoi="87"/>
     </DS_CAU_HOI>
   </DE><DE Ma_de="12" Ma_nguoi_tao="4">
     <DS_CAU_HOI>
@@ -130,7 +128,6 @@
       <CAU Ma_cau_hoi="4"/>
       <CAU Ma_cau_hoi="5"/>
       <CAU Ma_cau_hoi="14"/>
-      <CAU Ma_cau_hoi="87"/>
     </DS_CAU_HOI>
   </DE><DE Ma_de="13" Ma_nguoi_tao="4">
     <DS_CAU_HOI>
@@ -140,7 +137,6 @@
       <CAU Ma_cau_hoi="4"/>
       <CAU Ma_cau_hoi="5"/>
       <CAU Ma_cau_hoi="14"/>
-      <CAU Ma_cau_hoi="87"/>
     </DS_CAU_HOI>
   </DE><DE Ma_de="14" Ma_nguoi_tao="4">
     <DS_CAU_HOI>
@@ -150,7 +146,6 @@
       <CAU Ma_cau_hoi="4"/>
       <CAU Ma_cau_hoi="5"/>
       <CAU Ma_cau_hoi="14"/>
-      <CAU Ma_cau_hoi="87"/>
     </DS_CAU_HOI>
   </DE><DE Ma_de="15" Ma_nguoi_tao="4">
     <DS_CAU_HOI>
@@ -160,7 +155,6 @@
       <CAU Ma_cau_hoi="4"/>
       <CAU Ma_cau_hoi="5"/>
       <CAU Ma_cau_hoi="14"/>
-      <CAU Ma_cau_hoi="87"/>
     </DS_CAU_HOI>
   </DE><DE Ma_de="16" Ma_nguoi_tao="4">
     <DS_CAU_HOI>
@@ -170,7 +164,6 @@
       <CAU Ma_cau_hoi="4"/>
       <CAU Ma_cau_hoi="5"/>
       <CAU Ma_cau_hoi="14"/>
-      <CAU Ma_cau_hoi="87"/>
     </DS_CAU_HOI>
   </DE>
 </DS_BO_DE>
