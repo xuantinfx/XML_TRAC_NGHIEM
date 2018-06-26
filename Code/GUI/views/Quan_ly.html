@@ -74,38 +74,36 @@
                         </div>
 
                         <div class="form-group card card-inverse">
-                            <label id="cau_hoi_duyet" ma_cau_hoi="">Câu hỏi:</label>
-                            <input type="text" class="form-control" id="cau_hoi" value='Đèn đỏ dừng bao nhiêu giây?' disabled="true">
+                            <label ma_cau_hoi="">Câu hỏi:</label>
+                            <input id="cau_hoi_duyet" type="text" class="form-control" value='Đèn đỏ dừng bao nhiêu giây?' disabled="true">
                         </div>
                         <div class="form-group card card-inverse">
                             <label id="phuong_an_a">A:</label>
-                            <input type="text" class="form-control" id="phuong_an_a" value='30s' disabled="true">
+                            <input type="text" class="form-control" id="da_0_duyet" value='30s' disabled="true">
                         </div>
                         <div class="form-group card card-inverse">
                             <label for="phuong_an_b">B:</label>
-                            <input type="text" class="form-control" id="phuong_an_b" value='40s' disabled="true">
+                            <input type="text" class="form-control" id="da_1_duyet" value='40s' disabled="true">
                         </div>
                         <div class="form-group card card-inverse">
                             <label for="phuong_an_c">C:</label>
-                            <input type="text" class="form-control" id="phuong_an_c" value='50s' disabled="true">
+                            <input type="text" class="form-control" id="da_2_duyet" value='50s' disabled="true">
                         </div>
                         <div class="form-group card card-inverse">
                             <label for="phuong_an_d">D:</label>
-                            <input type="text" class="form-control" id="phuong_an_d" value='60s' disabled="true">
+                            <input type="text" class="form-control" id="da_3_duyet" value='60s' disabled="true">
                         </div>
                         <div align="center">
                             <span>Đáp án</span>
                             <select disabled="true">
-                                <option value="A">A</option>
-                                <option value="B">B</option>
-                                <option value="C">C</option>
-                                <option value="D">D</option>
+                                <option value="A" id='dap_an_duyet'>A</option>
+                                
                             </select>
                         </div>
                         <div align="center" style="background-color: lightblue">
                             <br>
                             <div>
-                                <button class="btn btn-primary" onClick()="onDuyet()">Duyệt </button>
+                                <button class="btn btn-primary" onClick()="onDuyet()" id="btn_duyet">Duyệt </button>
                             </div>
                             <br>
                             <div class="card card-info">
@@ -240,6 +238,23 @@
             }
         }
 
+        requestApi('/lay-cau-hoi', 'GET', {'maCauHoi': '0'}).then(data => {
+            document.getElementById('cau_hoi_duyet').value = data.getElementsByTagName('DE')[0].innerHTML
+            for (let i = 0; i < 4; ++i) {
+                document.getElementById('da_' + i + '_duyet').value = data.getElementsByTagName('DAP_AN')[i].innerHTML
+            }
+                
+            let dapAn = data.getElementsByTagName('CAU_HOI')[0].getAttribute('Dap_an')
+            document.getElementById('dap_an_duyet').innerHTML = String.fromCharCode(dapAn.charCodeAt() - 48 + 65)
+            let daDuyet = data.getElementsByTagName('CAU_HOI')[0].getAttribute('Da_duyet')
+            console.log(daDuyet)
+            if (daDuyet == 'true') {
+                document.getElementById('btn_duyet').setAttribute('disabled', 'true')
+            } else {
+                document.getElementById('btn_duyet').removeAttribute('disabled') 
+            }
+        })
+
         function onViewQuestion() {
             let maCauHoi = document.getElementById('ma_cau_hoi_xem').value
             if (maCauHoi[0] == 'C') maCauHoi = maCauHoi.split(' ')[1]
@@ -256,6 +271,7 @@
                 document.getElementById('input_' + dapAn + '_xem').setAttribute('checked', 'true')
             })
         }
+
     </script>
 </body>
 

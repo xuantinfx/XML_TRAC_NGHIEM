@@ -103,7 +103,7 @@ module.exports.layCauHoi = (XMLDOMCauHoi, maCauHoi) => {
   let listCauHoi = XMLDOMCauHoi.DS_CAU_HOI.CAU_HOI;
   let i;
   for(i = 0; i < listCauHoi.length; i++) {
-    if((maCauHoi == listCauHoi[i].$.Ma_cau_hoi) && (listCauHoi[i].$.Da_duyet == 'true')) {
+    if(maCauHoi == listCauHoi[i].$.Ma_cau_hoi) {
       result.CAU_HOI = listCauHoi[i];
       break;
     }
