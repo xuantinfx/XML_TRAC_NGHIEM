@@ -1,17 +1,17 @@
 const BUS_API = "http://localhost:3001";
 
-var requestApi = (uri, method, att, data) => {
+var requestApi = (uri, method, data) => {
     return new Promise((resole, reject) => {
-        if(method.toLowerCase() == 'get' && data) {
+        if (method.toLowerCase() == 'get' && data) {
             uri += "?";
             let first = true;
-            for(i in data) {
-                if(first) {
-                    uri += att[i] + "=" + data[i];
+            for (i in data) {
+                if (first) {
+                    uri += i + "=" + data[i];
 
                     first = false;
                 } else {
-                    uri += "&" + att[i] + "=" + data[i];
+                    uri += "&" + i + "=" + data[i];
                 }
             }
             data = null;
