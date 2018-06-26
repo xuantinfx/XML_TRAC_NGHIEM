@@ -25,6 +25,11 @@ var requestApi = (uri, method, data) => {
                 Authorization: token
             }
         }).done((result) => {
+            console.log(result)
+            if(result == "need login") {
+                console.log(result)
+                window.location.href = "/login"
+            }
             resole(result);
         })
     })

@@ -7,14 +7,14 @@ const {
 //Khởi tạo server
 http
 	.createServer((req, res) => {
-
 		//code thêm hàm hỗ trợ
 		res.mySend = (path) => {
 			fs.readFile(path, (err, data) => {
 				if (err) {
 					//console.log(err);
 					res.statusCode = 404;
-					res.end();
+					res.setHeader("Content-type", "text/html");
+					res.end(fs.readFileSync(__dirname + "/views/Error.html"));
 				} else {
 					res.statusCode = 200;
 					res.end(data);
@@ -24,15 +24,6 @@ http
 
 		console.log(req.method, req.url);
 		res.setHeader("Access-Control-Allow-Origin", "*");
-		//res.setHeader("Content-type", "text/xml");
-
-		//Kiểm tra đơn giản bằng cách kiểm tra access_token
-		//Sau này phức tạp hơn phải xây dựng 1 class đảm nhận việc này
-		// if(req.headers.access_token != access_token){
-		//   //Nếu access_token không hợp lệ thì không cho sử dụng hàm bên dưới
-		//   return res.end('deny');
-		// }
-
 		//Method GET
 		if (req.method.toUpperCase() == "GET") {
 			//Decode URL
@@ -74,14 +65,20 @@ http
 						res.mySend(__dirname + "/views/Quan_ly.html");
 						break;
 					}
+				case "/login":
+					{
+						res.setHeader("Content-type", "text/html");
+						res.mySend(__dirname + "/views/Login.html");
+						break
+					}
 				default:
 					{
 						res.mySend(__dirname + "/public" + pathname);
 						break;
 					}
 			}
-		} else if (req.method.toUpperCase() == "POST") {
-			res.end();
+		} else {
+			res.mySend(__dirname + "/views/Error.html");
 		}
 
 	})
