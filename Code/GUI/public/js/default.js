@@ -29,7 +29,8 @@ var requestApi = (uri, method, data) => {
 var Tag = {
     CAU_HOI: "CAU_HOI",
     DE: "DE",
-    DAP_AN: "DAP_AN"
+    DAP_AN: "DAP_AN",
+    CAU: "CAU"
 }
 
 var Attri = {
