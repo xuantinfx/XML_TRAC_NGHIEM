@@ -39,7 +39,8 @@ http
     let user = {
       isLogin: false,
       laGiaoVien: false,
-      laQuanLy: false
+      laQuanLy: false,
+      ma: ""
     }
     //Kiểm tra đã đăng nhập chưa?
     //Kiểm tra có phải là giáo viên hay quản lý
@@ -49,6 +50,7 @@ http
         resultCheckLogin = JSON.parse(resultCheckLogin);
         if (resultCheckLogin.status != "error") {
           user.isLogin = true;
+          user.ma = resultCheckLogin.data.ma;
           if (resultCheckLogin.data.type == 'giáo viên') {
             user.laGiaoVien = true;
           } else {
