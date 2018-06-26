@@ -138,23 +138,23 @@
                 </div>
                 </div>
                 <div style="background-color: #d5dbe5">
-                    <h5>Câu 1: Đèn vàng có màu gì?</h5>
+                    <h5 id="cau_hoi_xem">Câu 1: Đèn vàng có màu gì?</h5>
                      <div>
                         <div class="clearfix">
-                            <input type="radio" name="qs7" id="qs70" disabled="true">
-                            <label for="qs70">Xanh</label>
+                            <input id="input_phuong_an_0" type="radio" name="qs7" id="qs70" disabled="true">
+                            <label for="qs70" id="phuong_an_0_xem">Xanh</label>
                         </div>
                         <div class="clearfix">
-                            <input type="radio" name="qs7" id="qs71" disabled="true">
-                            <label for="qs71">Đỏ</label>
+                            <input id="input_phuong_an_1" type="radio" name="qs7" id="qs71" disabled="true">
+                            <label for="qs71" id="phuong_an_1_xem">Đỏ</label>
                         </div>
                         <div class="clearfix">
-                            <input type="radio" name="qs7" id="qs72" disabled="true">
-                            <label for="qs72">Tím</label>
+                            <input id="input_phuong_an_2" type="radio" name="qs7" id="qs72" disabled="true">
+                            <label for="qs72" id="phuong_an_2_xem">Tím</label>
                         </div>
                         <div class="clearfix">
-                            <input type="radio" name="qs7" id="qs73" disabled="true" checked="true">
-                            <label for="qs70">Vàng</label>
+                            <input id="input_phuong_an_3" type="radio" name="qs7" id="qs73" disabled="true" checked="true">
+                            <label for="qs70" id="phuong_an_3_xem">Vàng</label>
                         </div>
                     </div>
                     <div align="center" class="card card-info">
@@ -182,10 +182,9 @@
                 if(method.toLowerCase() == 'get' && data) {
                     uri += "?";
                     let first = true;
-                    for(i in data) {
+                    for(let i = 0; i < data.length; ++i) {
                         if(first) {
                             uri += att[i] + "=" + data[i];
-
                             first = false;
                         } else {
                             uri += "&" + att[i] + "=" + data[i];
@@ -202,13 +201,11 @@
                     console.log(tmp)
                     data = tmp
                 }
-                console.log(data)
                 $.ajax({
                     method: method,
                     url: BUS_API + uri,
                     data: data
                 }).done((result) => {
-                    console.log(result)
                     resole(result);
                 })
             })
@@ -231,7 +228,19 @@
 
         function onViewQuestion() {
             let maCauHoi = document.getElementById('cau_hoi_can_xem').value
-            requestApi('/xem-cau-hoi', 'GET', ['maCauHoi'], [maCauHoi])
+            if (maCauHoi[0] == 'C') maCauHoi = maCauHoi.split(' ')[1]
+            requestApi('/lay-cau-hoi', 'GET', ['maCauHoi'], [maCauHoi]).then(data => {
+                console.log(data)
+                let cauHoi = data.getElementsByTagName('DE')[0].innerHTML
+                let dsDapAn = data.getElementsByTagName('DAP_AN')
+                document.getElementById('cau_hoi_xem').innerHTML = cauHoi
+                for (let i = 0; i < 4; ++i) {
+                    document.getElementById('phuong_an_' + i + '_xem').innerHTML = dsDapAn[i].innerHTML
+                }
+                let dapAn = data.getElementsByTagName('CAU_HOI')[0].getAttribute('Dap_an')
+                console.log('input_phuong_an_' + dapAn)
+                document.getElementById('input_phuong_an_' + dapAn).setAttribute('checked', 'true')
+            })
         }
     </script>
     </body>
