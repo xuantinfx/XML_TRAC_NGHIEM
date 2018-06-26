@@ -104,6 +104,64 @@ http.createServer((req, res) => {
                         })
                     })
                 }
+                case "/check-is-giao-vien-login":
+                {
+                    let body = '';
+                    req.on('data', function (data) {
+                        body += data;
+
+                        if (body.length > 1e6)
+                            req.connection.destroy();
+                    });
+                    req.on('end', function () {
+                        try {
+                            body = JSON.parse(body);
+                        } catch (err) {
+                            res.end(mauTraVe(false, "Dữ liệu truyền lên không đúng format"))
+                            return;
+                        }
+                        SECURITY.postCheckLogin(body.token)
+                        .then(decode => {
+                            if(decode.type == 'giáo viên') {
+                                res.end(mauTraVe(true, decode));
+                            } else {
+                                res.end(mauTraVe(false, "Không phải giáo viên"))
+                            }
+                        })
+                        .catch(err => {
+                            res.end(mauTraVe(false, "Sai token"))
+                        })
+                    })
+                }
+                case "/check-is-quan-ly-login":
+                {
+                    let body = '';
+                    req.on('data', function (data) {
+                        body += data;
+
+                        if (body.length > 1e6)
+                            req.connection.destroy();
+                    });
+                    req.on('end', function () {
+                        try {
+                            body = JSON.parse(body);
+                        } catch (err) {
+                            res.end(mauTraVe(false, "Dữ liệu truyền lên không đúng format"))
+                            return;
+                        }
+                        SECURITY.postCheckLogin(body.token)
+                        .then(decode => {
+                            if(decode.type == 'quản lý') {
+                                res.end(mauTraVe(true, decode));
+                            } else {
+                                res.end(mauTraVe(false, "Không phải quản lý"))
+                            }
+                        })
+                        .catch(err => {
+                            res.end(mauTraVe(false, "Sai token"))
+                        })
+                    })
+                }
             default:
                 break
         }

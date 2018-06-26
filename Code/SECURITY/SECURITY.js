@@ -116,7 +116,7 @@ module.exports.postLogin = (dsGiaoVien, dsQuanLy, ten, matKhau) => {
                     result = {
                         ten: dsQuanLy[i].ten,
                         ma: dsQuanLy[i].ma,
-                        type: "Quản lý"
+                        type: "quản lý"
                     }
                 } else {
                     //login that bai
@@ -127,7 +127,7 @@ module.exports.postLogin = (dsGiaoVien, dsQuanLy, ten, matKhau) => {
         }
     }
     if(result == "") return false;
-    return jwt.sign(result,secretkey);
+    return {token: jwt.sign(result,secretkey), data: result};
 }
 
 module.exports.postCheckLogin = (token) => {
