@@ -90,7 +90,7 @@
                         
                         <div align="center">
                             <span>Đáp án<span>
-                            <select>
+                            <select id="dap_an">
                                 <option value="A">A</option>
                                 <option value="B">B</option>
                                 <option value="C">C</option>
@@ -100,7 +100,7 @@
 
                         <div align="center" class="bg-info">
                             <br>
-                            <button class="btn btn-primary">Thêm </button>
+                            <button class="btn btn-primary" id="btnAddQuestion" onClick="onAddQuestion()">Thêm </button>
                             <br>
                             <br>
                         </div>
@@ -109,7 +109,7 @@
                  <td style="vertical-align: top">
                 <div class="dropdown-list" style="background-color: lightblue; width: 400px; max-width: 1000px" align="center">
                 <label class="bg-info card card-header" style="color: white; width: 100%; font-size: 30px">Xem câu hỏi</label>
-                <input list="bo-cau-hoi-xem" class="form-inline form-control" placeholder="Chọn câu hỏi">
+                <input list="bo-cau-hoi-xem" class="form-inline form-control" placeholder="Chọn câu hỏi" id="cau_hoi_can_xem">
                 <br>
                 <datalist id="bo-cau-hoi-xem" >
                   <option value="Câu 1">
@@ -134,27 +134,27 @@
                   <option value="Câu 20">
                 </datalist>
                 <div align="right">
-                  <button class="btn btn-primary">Xem</button>
+                  <button class="btn btn-primary" onClick="onViewQuestion()">Xem</button>
                 </div>
                 </div>
                 <div style="background-color: #d5dbe5">
-                    <h5>Câu 1: Đèn vàng có màu gì?</h5>
+                    <h5 id="cau_hoi_xem">Câu 1: Đèn vàng có màu gì?</h5>
                      <div>
                         <div class="clearfix">
-                            <input type="radio" name="qs7" id="qs70" disabled="true">
-                            <label for="qs70">Xanh</label>
+                            <input id="input_phuong_an_0" type="radio" name="qs7" id="qs70" disabled="true">
+                            <label for="qs70" id="phuong_an_0_xem">Xanh</label>
                         </div>
                         <div class="clearfix">
-                            <input type="radio" name="qs7" id="qs71" disabled="true">
-                            <label for="qs71">Đỏ</label>
+                            <input id="input_phuong_an_1" type="radio" name="qs7" id="qs71" disabled="true">
+                            <label for="qs71" id="phuong_an_1_xem">Đỏ</label>
                         </div>
                         <div class="clearfix">
-                            <input type="radio" name="qs7" id="qs72" disabled="true">
-                            <label for="qs72">Tím</label>
+                            <input id="input_phuong_an_2" type="radio" name="qs7" id="qs72" disabled="true">
+                            <label for="qs72" id="phuong_an_2_xem">Tím</label>
                         </div>
                         <div class="clearfix">
-                            <input type="radio" name="qs7" id="qs73" disabled="true" checked="true">
-                            <label for="qs70">Vàng</label>
+                            <input id="input_phuong_an_3" type="radio" name="qs7" id="qs73" disabled="true" checked="true">
+                            <label for="qs70" id="phuong_an_3_xem">Vàng</label>
                         </div>
                     </div>
                     <div align="center" class="card card-info">
@@ -171,5 +171,77 @@
             </tr>
         </table>
     </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+        const BUS_API = "http://localhost:3001";
+
+        var requestApi = (uri, method, att, data) => {
+            return new Promise((resole, reject) => {
+                if(method.toLowerCase() == 'get' && data) {
+                    uri += "?";
+                    let first = true;
+                    for(let i = 0; i < data.length; ++i) {
+                        if(first) {
+                            uri += att[i] + "=" + data[i];
+                            first = false;
+                        } else {
+                            uri += "&" + att[i] + "=" + data[i];
+                        }
+                    }
+                    data = null;
+                } else if (method.toLowerCase() == 'post' && data) {
+                    let tmp = ''
+                    for(let i = 0; i < att.length; ++i) {
+                        if (i > 0) tmp += '&'
+                        tmp += att[i] + '=' + data[i]
+                    }
+                    tmp.replace(' ', '%20')                    
+                    console.log(tmp)
+                    data = tmp
+                }
+                $.ajax({
+                    method: method,
+                    url: BUS_API + uri,
+                    data: data
+                }).done((result) => {
+                    resole(result);
+                })
+            })
+        }
+
+        function onAddQuestion() {
+            let atts = ['cauHoi', 'dsDapAn', 'dapAn', 'maNguoiDang']
+            let cauHoi = document.getElementById('cau_hoi').value
+            let dapAn = String.fromCharCode(document.getElementById('dap_an').value.charCodeAt() - 65 + 48)
+            let dsDapAn = document.getElementById('phuong_an_a').value
+            dsDapAn += ';' + document.getElementById('phuong_an_b').value
+            dsDapAn += ';' + document.getElementById('phuong_an_c').value
+            dsDapAn += ';' + document.getElementById('phuong_an_d').value
+            // TODO: change this after authentication
+            let maNguoiDang = '2018'
+            let vals = [cauHoi, dsDapAn, dapAn, maNguoiDang]
+            console.log(vals)
+            requestApi('/them-cau-hoi', 'POST', atts, vals);
+        }
+
+        function onViewQuestion() {
+            let maCauHoi = document.getElementById('cau_hoi_can_xem').value
+            if (maCauHoi[0] == 'C') maCauHoi = maCauHoi.split(' ')[1]
+            requestApi('/lay-cau-hoi', 'GET', ['maCauHoi'], [maCauHoi]).then(data => {
+                console.log(data)
+                let cauHoi = data.getElementsByTagName('DE')[0].innerHTML
+                let dsDapAn = data.getElementsByTagName('DAP_AN')
+                document.getElementById('cau_hoi_xem').innerHTML = cauHoi
+                for (let i = 0; i < 4; ++i) {
+                    document.getElementById('phuong_an_' + i + '_xem').innerHTML = dsDapAn[i].innerHTML
+                }
+                let dapAn = data.getElementsByTagName('CAU_HOI')[0].getAttribute('Dap_an')
+                console.log('input_phuong_an_' + dapAn)
+                document.getElementById('input_phuong_an_' + dapAn).setAttribute('checked', 'true')
+            })
+        }
+    </script>
     </body>
     </html>
