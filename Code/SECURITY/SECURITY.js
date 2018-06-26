@@ -1,7 +1,8 @@
 const request = require('request')
 const jwt = require('jsonwebtoken');
 const {
-    DAL_URL
+    DAL_URL,
+    secretkey
 } = require('./config')
 const xml2js = require('xml2js')
 
@@ -125,6 +126,20 @@ module.exports.postLogin = (dsGiaoVien, dsQuanLy, ten, matKhau) => {
             }
         }
     }
+    if(result == "") return false;
+    return jwt.sign(result,secretkey);
+}
 
-    return jwt.sign(result,"XMLXMLXML");
+module.exports.postCheckLogin = (token) => {
+    return new Promise((resole, reject) => {
+        jwt.verify(token,secretkey,(err, decode) => {
+            if(err) {
+                reject(err)
+            }
+            else {
+                delete decode.iat;
+                resole(decode);
+            }
+        })
+    })
 }
