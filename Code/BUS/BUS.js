@@ -166,7 +166,6 @@ module.exports.layBoDe = (XMLDOMBoDe, maDe) => {
 
 module.exports.themCauHoi = async (XMLDOMCauHoi, data) => {
   return new Promise((resolve, reject) => {
-    console.log(data)
     request({
         headers: {
           //insert header later
@@ -183,6 +182,15 @@ module.exports.themCauHoi = async (XMLDOMCauHoi, data) => {
           if (body == '') {
             return reject(new Error('respone data is empty'))
           }
+          this.InitCache(URL_DAL, (err, result) => {
+            if (err) {
+              console.log(err);
+              return;
+            }
+            Cache = result;
+            console.log("Đã cập nhật Cache xong!");
+            //console.log(Cache);
+          });
           return resolve(body);
         }
       }
@@ -192,11 +200,12 @@ module.exports.themCauHoi = async (XMLDOMCauHoi, data) => {
 
 module.exports.duyetCauHoi = async (XMLDOMCauHoi, data) => {
   let result = {};
+  console.log(data)
   let maCauHoi = data.maCauHoi;
   let listCauHoi = XMLDOMCauHoi.DS_CAU_HOI.CAU_HOI;
   let i;
   for (i = 0; i < listCauHoi.length; i++) {
-    console.log(typeof (maCauHoi), typeof (listCauHoi[i].$.Ma_cau_hoi))
+    console.log(listCauHoi[i], '@@@@@@@@@')
     if (maCauHoi == listCauHoi[i].$.Ma_cau_hoi) {
       result.CAU_HOI = listCauHoi[i];
       break;
@@ -224,6 +233,15 @@ module.exports.duyetCauHoi = async (XMLDOMCauHoi, data) => {
           if (body == '') {
             return reject(new Error('respone data is empty'))
           }
+          this.InitCache(URL_DAL, (err, result) => {
+            if (err) {
+              console.log(err);
+              return;
+            }
+            Cache = result;
+            console.log("Đã cập nhật Cache xong!");
+            //console.log(Cache);
+          });
           return resolve(body);
         }
       }
@@ -252,6 +270,15 @@ module.exports.taoBoDe = async (XMLDOMCauHoi, data) => {
           if (body == '') {
             return reject(new Error('respone data is empty'))
           }
+          this.InitCache(URL_DAL, (err, result) => {
+            if (err) {
+              console.log(err);
+              return;
+            }
+            Cache = result;
+            console.log("Đã cập nhật Cache xong!");
+            //console.log(Cache);
+          }); 
           return resolve(body);
         }
       }

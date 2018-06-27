@@ -53,7 +53,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Log out
+                    <a class="nav-link" href="#" onClick="onLogOut()">Log out
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
@@ -75,23 +75,23 @@
 
                         <div class="form-group card card-inverse">
                             <label ma_cau_hoi="">Câu hỏi:</label>
-                            <input id="cau_hoi_duyet" type="text" class="form-control" value='Đèn đỏ dừng bao nhiêu giây?' disabled="true">
+                            <input id="cau_hoi_duyet" ma_cau_hoi="" type="text" class="form-control" value='' disabled="true">
                         </div>
                         <div class="form-group card card-inverse">
                             <label id="phuong_an_a">A:</label>
-                            <input type="text" class="form-control" id="da_0_duyet" value='30s' disabled="true">
+                            <input type="text" class="form-control" id="da_0_duyet" value='' disabled="true">
                         </div>
                         <div class="form-group card card-inverse">
                             <label for="phuong_an_b">B:</label>
-                            <input type="text" class="form-control" id="da_1_duyet" value='40s' disabled="true">
+                            <input type="text" class="form-control" id="da_1_duyet" value='' disabled="true">
                         </div>
                         <div class="form-group card card-inverse">
                             <label for="phuong_an_c">C:</label>
-                            <input type="text" class="form-control" id="da_2_duyet" value='50s' disabled="true">
+                            <input type="text" class="form-control" id="da_2_duyet" value='' disabled="true">
                         </div>
                         <div class="form-group card card-inverse">
                             <label for="phuong_an_d">D:</label>
-                            <input type="text" class="form-control" id="da_3_duyet" value='60s' disabled="true">
+                            <input type="text" class="form-control" id="da_3_duyet" value='' disabled="true">
                         </div>
                         <div align="center">
                             <span>Đáp án</span>
@@ -103,18 +103,10 @@
                         <div align="center" style="background-color: lightblue">
                             <br>
                             <div>
-                                <button class="btn btn-primary" onClick()="onDuyet()" id="btn_duyet">Duyệt </button>
+                                <button class="btn btn-primary" onClick="onDuyet()" id="btn_duyet">Duyệt </button>
                             </div>
                             <br>
-                            <div class="card card-info">
-                                <div class="bg-info">
-                                    <br>
-                                    <button class="btn previous">&laquo; Trước</button>
-                                    <button class="btn next">Sau &raquo;</button>
-                                    <br>
-                                    <br>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                 </td>
@@ -123,7 +115,7 @@
                     </div>
 
                     <div align="right" style="background-color: #fff1aa">
-                        <button class="btn btn-primary btn-lg">Tạo</button>
+                        <button class="btn btn-primary btn-lg" onClick="onTaoDe()">Tạo</button>
                     </div>
                 </td>
             </tr>
@@ -193,8 +185,8 @@
                         <div align="center" class="card card-info">
                             <div class="bg-info">
                                 <br>
-                                <button class="btn previous">&laquo; Trước</button>
-                                <button class="btn next">Sau &raquo; </button>
+                                <button class="btn previous" onClick="onPrev()">&laquo; Trước</button>
+                                <button class="btn next" onClick="onNext()">Sau &raquo; </button>
                                 <br>
                                 <br>
                             </div>
@@ -217,6 +209,7 @@
             label.innerHTML = 'Câu ' + (i + 1)
             label.setAttribute('style', 'width: 100%')
             let input = document.createElement('input')
+            input.id = 'input_cau_' + i
             let datalist = document.createElement('datalist')
             datalist.id = 'list-cau-hoi'
             for (let j = 0; j < 20; ++j) {
@@ -238,22 +231,35 @@
             }
         }
 
-        requestApi('/lay-cau-hoi', 'GET', {'maCauHoi': '0'}).then(data => {
-            document.getElementById('cau_hoi_duyet').value = data.getElementsByTagName('DE')[0].innerHTML
-            for (let i = 0; i < 4; ++i) {
-                document.getElementById('da_' + i + '_duyet').value = data.getElementsByTagName('DAP_AN')[i].innerHTML
-            }
+        function layCauHoiCanDuyet() {
+            var id = -1
+            requestApi('/lay-danh-sach-cau-hoi', 'GET', {}).then(res => {
+                let dsCauHoi = res.getElementsByTagName('CAU_HOI')
+                let ok = 0
                 
-            let dapAn = data.getElementsByTagName('CAU_HOI')[0].getAttribute('Dap_an')
-            document.getElementById('dap_an_duyet').innerHTML = String.fromCharCode(dapAn.charCodeAt() - 48 + 65)
-            let daDuyet = data.getElementsByTagName('CAU_HOI')[0].getAttribute('Da_duyet')
-            console.log(daDuyet)
-            if (daDuyet == 'true') {
-                document.getElementById('btn_duyet').setAttribute('disabled', 'true')
-            } else {
-                document.getElementById('btn_duyet').removeAttribute('disabled') 
-            }
-        })
+                for (let j = 0; j < dsCauHoi.length; ++j) {
+                    let data = dsCauHoi[j]
+                    if (data.getAttribute('Da_duyet') == 'false') {
+                        document.getElementById('cau_hoi_duyet').value = data.getElementsByTagName('DE')[0].innerHTML
+                        for (let i = 0; i < 4; ++i) {
+                            document.getElementById('da_' + i + '_duyet').value = data.getElementsByTagName('DAP_AN')[i].innerHTML
+                        }
+                            
+                        let dapAn = data.getAttribute('Dap_an')
+                        document.getElementById('dap_an_duyet').innerHTML = String.fromCharCode(dapAn.charCodeAt() - 48 + 65)
+                        document.getElementById('btn_duyet').removeAttribute('disabled')
+                        document.getElementById('cau_hoi_duyet').setAttribute('ma_cau_hoi', data.getAttribute('Ma_cau_hoi'))
+                        ok = 1
+                    }
+                    if (ok == 1) break
+                }
+                if (ok == 0) {
+                    document.getElementById('btn_duyet').setAttribute('disabled', 'true')            
+                    document.getElementById('cau_hoi_duyet').value = 'Không có câu hỏi chưa duyệt!'
+                }
+            })
+            
+        }
 
         function onViewQuestion() {
             let maCauHoi = document.getElementById('ma_cau_hoi_xem').value
@@ -272,6 +278,45 @@
             })
         }
 
+        function onLogOut() {
+            logOut()
+        }
+        
+        function onDuyet() {
+            console.log({'maCauHoi': document.getElementById('cau_hoi_duyet').getAttribute('ma_cau_hoi')})
+            requestApi('/duyet-cau-hoi', 'POST', {'maCauHoi': document.getElementById('cau_hoi_duyet').getAttribute('ma_cau_hoi')})
+            layCauHoiCanDuyet()
+        }
+
+        function onNext() {
+            let maCauHoi = document.getElementById('ma_cau_hoi_xem').value
+            if (maCauHoi[0] == 'C') maCauHoi = maCauHoi.split(' ')[1]
+            document.getElementById('ma_cau_hoi_xem').value = parseInt(maCauHoi) + 1
+            console.log(maCauHoi)
+            onViewQuestion()
+        }
+
+        function onPrev() {
+            let maCauHoi = document.getElementById('ma_cau_hoi_xem').value
+            if (maCauHoi[0] == 'C') maCauHoi = maCauHoi.split(' ')[1]
+            document.getElementById('ma_cau_hoi_xem').value = maCauHoi - 1
+            console.log(maCauHoi)
+            onViewQuestion()
+        }
+
+        function onTaoDe() {
+            let dsCauHoi = ''
+            for (let i = 0; i < 20; ++i) {
+                let cau = document.getElementById('input_cau_' + i).value
+                if (cau == '') continue
+                if (dsCauHoi) dsCauHoi += ';'
+                dsCauHoi += cau.split(' ')[1]
+            }
+            console.log(dsCauHoi)
+            requestApi('/tao-bo-de', 'POST', {'maCacCauHoi': dsCauHoi})
+        }
+
+        layCauHoiCanDuyet()
     </script>
 </body>
 

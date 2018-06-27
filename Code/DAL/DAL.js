@@ -103,7 +103,7 @@ module.exports.cauHoiWrite = (pathData, xmlDomCauHoi, cauHoi, dsDapAn, dapAn, ma
 module.exports.cauHoiUpdate = (pathData, xmlDomCauHoi, cauHoiMoi) => {
   for(let i = 0; i < xmlDomCauHoi.DS_CAU_HOI.CAU_HOI.length; i++){
     if(xmlDomCauHoi.DS_CAU_HOI.CAU_HOI[i].$.Ma_cau_hoi == cauHoiMoi.CAU_HOI.$.Ma_cau_hoi){
-      xmlDomCauHoi.DS_CAU_HOI.CAU_HOI[i] = cauHoiMoi;
+      xmlDomCauHoi.DS_CAU_HOI.CAU_HOI[i] = cauHoiMoi.CAU_HOI;
       break;
     }
   }

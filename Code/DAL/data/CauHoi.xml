@@ -27,16 +27,7 @@
       <DAP_AN Ma_dap_an="3">70s</DAP_AN>
     </DS_DAP_AN>
   </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="3" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="2">
-    <DE>xuaan tin ddax dep trai</DE>
-    <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">30s</DAP_AN>
-      <DAP_AN Ma_dap_an="1">40s</DAP_AN>
-      <DAP_AN Ma_dap_an="2">50s</DAP_AN>
-      <DAP_AN Ma_dap_an="3">61s</DAP_AN>
-    </DS_DAP_AN>
-  </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="4" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="2">
+  <CAU_HOI Ma_cau_hoi="3" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="Trinh">
     <DE>xuaan tin ddax dep trai</DE>
     <DS_DAP_AN>
       <DAP_AN Ma_dap_an="0">30s</DAP_AN>
@@ -53,7 +44,8 @@
       <DAP_AN Ma_dap_an="2">50s</DAP_AN>
       <DAP_AN Ma_dap_an="3">61s</DAP_AN>
     </DS_DAP_AN>
-  </CAU_HOI><CAU_HOI Ma_cau_hoi="6" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="2">
+  </CAU_HOI>
+  <CAU_HOI Ma_cau_hoi="6" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="2">
     <DE>xuaan tin ddax dep trai</DE>
     <DS_DAP_AN>
       <DAP_AN Ma_dap_an="0">30s</DAP_AN>
@@ -61,7 +53,8 @@
       <DAP_AN Ma_dap_an="2">50s</DAP_AN>
       <DAP_AN Ma_dap_an="3">61s</DAP_AN>
     </DS_DAP_AN>
-  </CAU_HOI><CAU_HOI Ma_cau_hoi="7" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="2">
+  </CAU_HOI>
+  <CAU_HOI Ma_cau_hoi="7" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="2">
     <DE>xuaan tin ddax dep trai</DE>
     <DS_DAP_AN>
       <DAP_AN Ma_dap_an="0">30s</DAP_AN>
@@ -69,7 +62,8 @@
       <DAP_AN Ma_dap_an="2">50s</DAP_AN>
       <DAP_AN Ma_dap_an="3">61s</DAP_AN>
     </DS_DAP_AN>
-  </CAU_HOI><CAU_HOI Ma_cau_hoi="8" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="2">
+  </CAU_HOI>
+  <CAU_HOI Ma_cau_hoi="8" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="Trinh">
     <DE>xuaan tin ddax dep trai</DE>
     <DS_DAP_AN>
       <DAP_AN Ma_dap_an="0">30s</DAP_AN>
@@ -77,7 +71,8 @@
       <DAP_AN Ma_dap_an="2">50s</DAP_AN>
       <DAP_AN Ma_dap_an="3">61s</DAP_AN>
     </DS_DAP_AN>
-  </CAU_HOI><CAU_HOI Ma_cau_hoi="9" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="2">
+  </CAU_HOI>
+  <CAU_HOI Ma_cau_hoi="9" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="2">
     <DE>xuaan tin ddax dep trai</DE>
     <DS_DAP_AN>
       <DAP_AN Ma_dap_an="0">30s</DAP_AN>
@@ -85,7 +80,8 @@
       <DAP_AN Ma_dap_an="2">50s</DAP_AN>
       <DAP_AN Ma_dap_an="3">61s</DAP_AN>
     </DS_DAP_AN>
-  </CAU_HOI><CAU_HOI Ma_cau_hoi="10" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="2">
+  </CAU_HOI>
+  <CAU_HOI Ma_cau_hoi="10" Dap_an="1" Da_duyet="false" Ma_nguoi_dang="3" Ma_nguoi_duyet="2">
     <DE>xuaan tin ddax dep trai</DE>
     <DS_DAP_AN>
       <DAP_AN Ma_dap_an="0">30s</DAP_AN>
@@ -93,7 +89,8 @@
       <DAP_AN Ma_dap_an="2">50s</DAP_AN>
       <DAP_AN Ma_dap_an="3">61s</DAP_AN>
     </DS_DAP_AN>
-  </CAU_HOI><CAU_HOI Ma_cau_hoi="11" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="2">
+  </CAU_HOI>
+  <CAU_HOI Ma_cau_hoi="11" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="2">
     <DE>xuaan tin ddax dep trai</DE>
     <DS_DAP_AN>
       <DAP_AN Ma_dap_an="0">30s</DAP_AN>
@@ -101,7 +98,8 @@
       <DAP_AN Ma_dap_an="2">50s</DAP_AN>
       <DAP_AN Ma_dap_an="3">61s</DAP_AN>
     </DS_DAP_AN>
-  </CAU_HOI><CAU_HOI Ma_cau_hoi="12" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="2">
+  </CAU_HOI>
+  <CAU_HOI Ma_cau_hoi="12" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="2">
     <DE>xuaan tin ddax dep trai</DE>
     <DS_DAP_AN>
       <DAP_AN Ma_dap_an="0">30s</DAP_AN>
@@ -109,7 +107,8 @@
       <DAP_AN Ma_dap_an="2">50s</DAP_AN>
       <DAP_AN Ma_dap_an="3">61s</DAP_AN>
     </DS_DAP_AN>
-  </CAU_HOI><CAU_HOI Ma_cau_hoi="13" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="2">
+  </CAU_HOI>
+  <CAU_HOI Ma_cau_hoi="13" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="Trinh">
     <DE>xuaan tin ddax dep trai</DE>
     <DS_DAP_AN>
       <DAP_AN Ma_dap_an="0">30s</DAP_AN>
@@ -117,15 +116,8 @@
       <DAP_AN Ma_dap_an="2">50s</DAP_AN>
       <DAP_AN Ma_dap_an="3">61s</DAP_AN>
     </DS_DAP_AN>
-  </CAU_HOI><CAU_HOI Ma_cau_hoi="14" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="2">
-    <DE>xuaan tin ddax dep trai</DE>
-    <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">30s</DAP_AN>
-      <DAP_AN Ma_dap_an="1">40s</DAP_AN>
-      <DAP_AN Ma_dap_an="2">50s</DAP_AN>
-      <DAP_AN Ma_dap_an="3">61s</DAP_AN>
-    </DS_DAP_AN>
-  </CAU_HOI><CAU_HOI Ma_cau_hoi="15" Dap_an="1" Da_duyet="false" Ma_nguoi_dang="3" Ma_nguoi_duyet="2">
+  </CAU_HOI>
+  <CAU_HOI Ma_cau_hoi="15" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="Trinh">
     <DE>xuaan tin ddax dep trai</DE>
     <DS_DAP_AN>
       <DAP_AN Ma_dap_an="0">30s</DAP_AN>

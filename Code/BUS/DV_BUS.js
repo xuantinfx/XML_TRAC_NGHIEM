@@ -118,10 +118,8 @@ http
                 req.connection.destroy();
             });
             req.on('end', function () {
-              console.log(body, '---------')
-
-              let cauHoiMoi = qs.parse(body);
-              console.log(cauHoiMoi)
+              let cauHoiMoi = JSON.parse(body);
+              cauHoiMoi.maNguoiDang = user.ma
               let result = BUS.themCauHoi(Cache[cauHoi], cauHoiMoi);
             })
             break
@@ -138,7 +136,7 @@ http
 
             req.on('end', function () {
               console.log(typeof (body), body);
-              let postdata = qs.parse(body);
+              let postdata = JSON.parse(body);
               let result = BUS.duyetCauHoi(Cache[cauHoi], postdata);
             })
             break
@@ -155,7 +153,7 @@ http
 
             req.on('end', function () {
               console.log(typeof (body), body);
-              let postdata = qs.parse(body);
+              let postdata = JSON.parse(body);
               postdata.maCacCauHoi = postdata.maCacCauHoi.split(';')
               console.log(postdata)
               let result = BUS.taoBoDe(Cache[cauHoi], postdata);

@@ -7,7 +7,7 @@
     <GIAO_VIEN Ma_giao_vien="4" Ten="Dao Xuan Tin" Mat_khau="12345"/>
   </DS_GIAO_VIEN>
   <DS_QUAN_LY>
-    <QUAN_LY Ma_quan_ly="3" Ten="Trinh" Mat_khau="456"/>
+    <QUAN_LY Ma_quan_ly="3"   Ten="Trinh" Mat_khau="456"/>
     <QUAN_LY Ma_quan_ly="4" Ten="Trinh" Mat_khau="456"/>
     <QUAN_LY Ma_quan_ly="5" Ten="TinTin" Mat_khau="lol"/>
     <QUAN_LY Ma_quan_ly="6" Ten="Dao Xuan Tin" Mat_khau="12345"/>
