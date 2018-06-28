@@ -135,7 +135,7 @@
       <DAP_AN Ma_dap_an="3">61s</DAP_AN>
     </DS_DAP_AN>
   </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="16" Dap_an="3" Da_duyet="false" Ma_nguoi_dang="1">
+  <CAU_HOI Ma_cau_hoi="16" Dap_an="3" Da_duyet="true" Ma_nguoi_dang="1" Ma_nguoi_duyet="Trinh">
     <DE>123456</DE>
     <DS_DAP_AN>
       <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
@@ -144,7 +144,7 @@
       <DAP_AN Ma_dap_an="3">kdjkd</DAP_AN>
     </DS_DAP_AN>
   </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="17" Dap_an="3" Da_duyet="false" Ma_nguoi_dang="1">
+  <CAU_HOI Ma_cau_hoi="17" Dap_an="3" Da_duyet="true" Ma_nguoi_dang="1" Ma_nguoi_duyet="Trinh">
     <DE>123456</DE>
     <DS_DAP_AN>
       <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
@@ -153,7 +153,7 @@
       <DAP_AN Ma_dap_an="3">kdjkd</DAP_AN>
     </DS_DAP_AN>
   </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="18" Dap_an="3" Da_duyet="false" Ma_nguoi_dang="1">
+  <CAU_HOI Ma_cau_hoi="18" Dap_an="3" Da_duyet="true" Ma_nguoi_dang="1" Ma_nguoi_duyet="Trinh">
     <DE>123456</DE>
     <DS_DAP_AN>
       <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
@@ -162,7 +162,7 @@
       <DAP_AN Ma_dap_an="3">kdjkd</DAP_AN>
     </DS_DAP_AN>
   </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="19" Dap_an="3" Da_duyet="false" Ma_nguoi_dang="1">
+  <CAU_HOI Ma_cau_hoi="19" Dap_an="3" Da_duyet="true" Ma_nguoi_dang="1" Ma_nguoi_duyet="Trinh">
     <DE>123456</DE>
     <DS_DAP_AN>
       <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
@@ -171,7 +171,7 @@
       <DAP_AN Ma_dap_an="3">kdjkd</DAP_AN>
     </DS_DAP_AN>
   </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="20" Dap_an="3" Da_duyet="false" Ma_nguoi_dang="1">
+  <CAU_HOI Ma_cau_hoi="20" Dap_an="3" Da_duyet="true" Ma_nguoi_dang="1" Ma_nguoi_duyet="Trinh">
     <DE>123456</DE>
     <DS_DAP_AN>
       <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
@@ -180,7 +180,7 @@
       <DAP_AN Ma_dap_an="3">kdjkd</DAP_AN>
     </DS_DAP_AN>
   </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="21" Dap_an="3" Da_duyet="false" Ma_nguoi_dang="1">
+  <CAU_HOI Ma_cau_hoi="21" Dap_an="3" Da_duyet="true" Ma_nguoi_dang="1" Ma_nguoi_duyet="Trinh">
     <DE>123456</DE>
     <DS_DAP_AN>
       <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
@@ -189,7 +189,7 @@
       <DAP_AN Ma_dap_an="3">kdjkd</DAP_AN>
     </DS_DAP_AN>
   </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="22" Dap_an="3" Da_duyet="false" Ma_nguoi_dang="1">
+  <CAU_HOI Ma_cau_hoi="22" Dap_an="3" Da_duyet="true" Ma_nguoi_dang="1" Ma_nguoi_duyet="Trinh">
     <DE>123456</DE>
     <DS_DAP_AN>
       <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
@@ -198,7 +198,7 @@
       <DAP_AN Ma_dap_an="3">kdjkd</DAP_AN>
     </DS_DAP_AN>
   </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="23" Dap_an="3" Da_duyet="false" Ma_nguoi_dang="1">
+  <CAU_HOI Ma_cau_hoi="23" Dap_an="3" Da_duyet="true" Ma_nguoi_dang="1" Ma_nguoi_duyet="Trinh">
     <DE>123456</DE>
     <DS_DAP_AN>
       <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
@@ -207,7 +207,7 @@
       <DAP_AN Ma_dap_an="3">kdjkd</DAP_AN>
     </DS_DAP_AN>
   </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="24" Dap_an="0" Da_duyet="false" Ma_nguoi_dang="1">
+  <CAU_HOI Ma_cau_hoi="24" Dap_an="0" Da_duyet="true" Ma_nguoi_dang="1" Ma_nguoi_duyet="Trinh">
     <DE/>
     <DS_DAP_AN>
       <DAP_AN Ma_dap_an="0"/>
@@ -216,7 +216,7 @@
       <DAP_AN Ma_dap_an="3"/>
     </DS_DAP_AN>
   </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="25" Dap_an="0" Da_duyet="false" Ma_nguoi_dang="1">
+  <CAU_HOI Ma_cau_hoi="25" Dap_an="0" Da_duyet="true" Ma_nguoi_dang="1" Ma_nguoi_duyet="Trinh">
     <DE/>
     <DS_DAP_AN>
       <DAP_AN Ma_dap_an="0"/>
@@ -225,7 +225,7 @@
       <DAP_AN Ma_dap_an="3"/>
     </DS_DAP_AN>
   </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="26" Dap_an="0" Da_duyet="false" Ma_nguoi_dang="1">
+  <CAU_HOI Ma_cau_hoi="26" Dap_an="0" Da_duyet="true" Ma_nguoi_dang="1" Ma_nguoi_duyet="Trinh">
     <DE>ai là</DE>
     <DS_DAP_AN>
       <DAP_AN Ma_dap_an="0">123</DAP_AN>
@@ -234,13 +234,175 @@
       <DAP_AN Ma_dap_an="3">dfn</DAP_AN>
     </DS_DAP_AN>
   </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="27" Dap_an="0" Da_duyet="false" Ma_nguoi_dang="1">
+  <CAU_HOI Ma_cau_hoi="27" Dap_an="0" Da_duyet="true" Ma_nguoi_dang="1" Ma_nguoi_duyet="Trinh">
     <DE>ai là</DE>
     <DS_DAP_AN>
       <DAP_AN Ma_dap_an="0">123</DAP_AN>
       <DAP_AN Ma_dap_an="1">k</DAP_AN>
       <DAP_AN Ma_dap_an="2">k</DAP_AN>
       <DAP_AN Ma_dap_an="3">dfn</DAP_AN>
+    </DS_DAP_AN>
+  </CAU_HOI>
+  <CAU_HOI Ma_cau_hoi="28" Dap_an="0" Da_duyet="true" Ma_nguoi_dang="1" Ma_nguoi_duyet="Trinh">
+    <DE>abc</DE>
+    <DS_DAP_AN>
+      <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
+      <DAP_AN Ma_dap_an="1">dm</DAP_AN>
+      <DAP_AN Ma_dap_an="2">vl</DAP_AN>
+      <DAP_AN Ma_dap_an="3">lsdkfew</DAP_AN>
+    </DS_DAP_AN>
+  </CAU_HOI>
+  <CAU_HOI Ma_cau_hoi="29" Dap_an="0" Da_duyet="true" Ma_nguoi_dang="1" Ma_nguoi_duyet="Trinh">
+    <DE>abc</DE>
+    <DS_DAP_AN>
+      <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
+      <DAP_AN Ma_dap_an="1">dm</DAP_AN>
+      <DAP_AN Ma_dap_an="2">vl</DAP_AN>
+      <DAP_AN Ma_dap_an="3">lsdkfew</DAP_AN>
+    </DS_DAP_AN>
+  </CAU_HOI>
+  <CAU_HOI Ma_cau_hoi="30" Dap_an="0" Da_duyet="true" Ma_nguoi_dang="1" Ma_nguoi_duyet="Trinh">
+    <DE>abc</DE>
+    <DS_DAP_AN>
+      <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
+      <DAP_AN Ma_dap_an="1">dm</DAP_AN>
+      <DAP_AN Ma_dap_an="2">vl</DAP_AN>
+      <DAP_AN Ma_dap_an="3">lsdkfew</DAP_AN>
+    </DS_DAP_AN>
+  </CAU_HOI>
+  <CAU_HOI Ma_cau_hoi="31" Dap_an="0" Da_duyet="true" Ma_nguoi_dang="1" Ma_nguoi_duyet="Trinh">
+    <DE>abc</DE>
+    <DS_DAP_AN>
+      <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
+      <DAP_AN Ma_dap_an="1">dm</DAP_AN>
+      <DAP_AN Ma_dap_an="2">vl</DAP_AN>
+      <DAP_AN Ma_dap_an="3">lsdkfew</DAP_AN>
+    </DS_DAP_AN>
+  </CAU_HOI>
+  <CAU_HOI Ma_cau_hoi="32" Dap_an="0" Da_duyet="true" Ma_nguoi_dang="1" Ma_nguoi_duyet="Trinh">
+    <DE>abc</DE>
+    <DS_DAP_AN>
+      <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
+      <DAP_AN Ma_dap_an="1">dm</DAP_AN>
+      <DAP_AN Ma_dap_an="2">vl</DAP_AN>
+      <DAP_AN Ma_dap_an="3">lsdkfew</DAP_AN>
+    </DS_DAP_AN>
+  </CAU_HOI>
+  <CAU_HOI Ma_cau_hoi="33" Dap_an="0" Da_duyet="false" Ma_nguoi_dang="1">
+    <DE>abc</DE>
+    <DS_DAP_AN>
+      <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
+      <DAP_AN Ma_dap_an="1">dm</DAP_AN>
+      <DAP_AN Ma_dap_an="2">vl</DAP_AN>
+      <DAP_AN Ma_dap_an="3">lsdkfew</DAP_AN>
+    </DS_DAP_AN>
+  </CAU_HOI>
+  <CAU_HOI Ma_cau_hoi="34" Dap_an="0" Da_duyet="false" Ma_nguoi_dang="1">
+    <DE>abc jlkjkl hjkhkj</DE>
+    <DS_DAP_AN>
+      <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
+      <DAP_AN Ma_dap_an="1">dm</DAP_AN>
+      <DAP_AN Ma_dap_an="2">vl</DAP_AN>
+      <DAP_AN Ma_dap_an="3">lsdkfew</DAP_AN>
+    </DS_DAP_AN>
+  </CAU_HOI>
+  <CAU_HOI Ma_cau_hoi="35" Dap_an="0" Da_duyet="false" Ma_nguoi_dang="1">
+    <DE>abc jlkjkl hjkhkj</DE>
+    <DS_DAP_AN>
+      <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
+      <DAP_AN Ma_dap_an="1">dm</DAP_AN>
+      <DAP_AN Ma_dap_an="2">vl</DAP_AN>
+      <DAP_AN Ma_dap_an="3">lsdkfew</DAP_AN>
+    </DS_DAP_AN>
+  </CAU_HOI>
+  <CAU_HOI Ma_cau_hoi="36" Dap_an="0" Da_duyet="false" Ma_nguoi_dang="1">
+    <DE>abc jlkjkl hjkhkj</DE>
+    <DS_DAP_AN>
+      <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
+      <DAP_AN Ma_dap_an="1">dm</DAP_AN>
+      <DAP_AN Ma_dap_an="2">vl</DAP_AN>
+      <DAP_AN Ma_dap_an="3">lsdkfew</DAP_AN>
+    </DS_DAP_AN>
+  </CAU_HOI>
+  <CAU_HOI Ma_cau_hoi="37" Dap_an="0" Da_duyet="false" Ma_nguoi_dang="1">
+    <DE>abc jlkjkl hjkhkj</DE>
+    <DS_DAP_AN>
+      <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
+      <DAP_AN Ma_dap_an="1">dm</DAP_AN>
+      <DAP_AN Ma_dap_an="2">vl</DAP_AN>
+      <DAP_AN Ma_dap_an="3">lsdkfew</DAP_AN>
+    </DS_DAP_AN>
+  </CAU_HOI>
+  <CAU_HOI Ma_cau_hoi="38" Dap_an="3" Da_duyet="false" Ma_nguoi_dang="1">
+    <DE>abc jlkjkl hjkhkj</DE>
+    <DS_DAP_AN>
+      <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
+      <DAP_AN Ma_dap_an="1">dm</DAP_AN>
+      <DAP_AN Ma_dap_an="2">vl</DAP_AN>
+      <DAP_AN Ma_dap_an="3">lsdkfew</DAP_AN>
+    </DS_DAP_AN>
+  </CAU_HOI>
+  <CAU_HOI Ma_cau_hoi="39" Dap_an="3" Da_duyet="false" Ma_nguoi_dang="1">
+    <DE>abc jlkjkl hjkhkj</DE>
+    <DS_DAP_AN>
+      <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
+      <DAP_AN Ma_dap_an="1">dm</DAP_AN>
+      <DAP_AN Ma_dap_an="2">vl</DAP_AN>
+      <DAP_AN Ma_dap_an="3">lsdkfew</DAP_AN>
+    </DS_DAP_AN>
+  </CAU_HOI>
+  <CAU_HOI Ma_cau_hoi="40" Dap_an="3" Da_duyet="false" Ma_nguoi_dang="1">
+    <DE>Abcdefew</DE>
+    <DS_DAP_AN>
+      <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
+      <DAP_AN Ma_dap_an="1">dm</DAP_AN>
+      <DAP_AN Ma_dap_an="2">vl</DAP_AN>
+      <DAP_AN Ma_dap_an="3">lsdkfew</DAP_AN>
+    </DS_DAP_AN>
+  </CAU_HOI>
+  <CAU_HOI Ma_cau_hoi="41" Dap_an="3" Da_duyet="false" Ma_nguoi_dang="1">
+    <DE>Abcdefew</DE>
+    <DS_DAP_AN>
+      <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
+      <DAP_AN Ma_dap_an="1">dm</DAP_AN>
+      <DAP_AN Ma_dap_an="2">vl</DAP_AN>
+      <DAP_AN Ma_dap_an="3">lsdkfew</DAP_AN>
+    </DS_DAP_AN>
+  </CAU_HOI>
+  <CAU_HOI Ma_cau_hoi="42" Dap_an="2" Da_duyet="false" Ma_nguoi_dang="1">
+    <DE/>
+    <DS_DAP_AN>
+      <DAP_AN Ma_dap_an="0"/>
+      <DAP_AN Ma_dap_an="1"/>
+      <DAP_AN Ma_dap_an="2"/>
+      <DAP_AN Ma_dap_an="3"/>
+    </DS_DAP_AN>
+  </CAU_HOI>
+  <CAU_HOI Ma_cau_hoi="43" Dap_an="2" Da_duyet="false" Ma_nguoi_dang="1">
+    <DE/>
+    <DS_DAP_AN>
+      <DAP_AN Ma_dap_an="0"/>
+      <DAP_AN Ma_dap_an="1"/>
+      <DAP_AN Ma_dap_an="2"/>
+      <DAP_AN Ma_dap_an="3"/>
+    </DS_DAP_AN>
+  </CAU_HOI>
+  <CAU_HOI Ma_cau_hoi="44" Dap_an="2" Da_duyet="false" Ma_nguoi_dang="1">
+    <DE>ử23rewr</DE>
+    <DS_DAP_AN>
+      <DAP_AN Ma_dap_an="0">sdf</DAP_AN>
+      <DAP_AN Ma_dap_an="1">sdf</DAP_AN>
+      <DAP_AN Ma_dap_an="2">ảg</DAP_AN>
+      <DAP_AN Ma_dap_an="3">re</DAP_AN>
+    </DS_DAP_AN>
+  </CAU_HOI>
+  <CAU_HOI Ma_cau_hoi="45" Dap_an="2" Da_duyet="false" Ma_nguoi_dang="1">
+    <DE>ử23rewr</DE>
+    <DS_DAP_AN>
+      <DAP_AN Ma_dap_an="0">sdf</DAP_AN>
+      <DAP_AN Ma_dap_an="1">sdf</DAP_AN>
+      <DAP_AN Ma_dap_an="2">ảg</DAP_AN>
+      <DAP_AN Ma_dap_an="3">re</DAP_AN>
     </DS_DAP_AN>
   </CAU_HOI>
 </DS_CAU_HOI>

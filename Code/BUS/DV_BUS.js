@@ -128,6 +128,7 @@ http
               .catch(err => {
                 console.log(err);
               })
+              res.end('Thêm câu hỏi thành công!')
             })
             break
           }
@@ -155,16 +156,17 @@ http
               .catch(err => {
                 console.log(err);
               })
+              res.end('Thêm câu hỏi thành công!')
             })
             break
           }
         case '/tao-bo-de':
           {
             let body = '';
-            if(!user.laQuanLy) {
-              res.end("need login")
-              return;
-            }
+            // if(!user.laQuanLy) {
+            //   res.end("need login")
+            //   return;
+            // }
             req.on('data', function (data) {
               body += data;
 
@@ -184,10 +186,15 @@ http
               .catch(err => {
                 console.log(err);
               })
+              console.log('End.....')
+            res.end('')
+            return;
+              
             })
             break
           }
         default:
+          res.end();
           break
       }
     }

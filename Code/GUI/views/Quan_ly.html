@@ -284,7 +284,10 @@
         
         function onDuyet() {
             console.log({'maCauHoi': document.getElementById('cau_hoi_duyet').getAttribute('ma_cau_hoi')})
-            requestApi('/duyet-cau-hoi', 'POST', {'maCauHoi': document.getElementById('cau_hoi_duyet').getAttribute('ma_cau_hoi')})
+            requestApi('/duyet-cau-hoi', 'POST', {'maCauHoi': document.getElementById('cau_hoi_duyet')
+                .getAttribute('ma_cau_hoi')}).then(res => {
+                    console.log(res, '-----')
+                })
             layCauHoiCanDuyet()
         }
 
@@ -314,6 +317,9 @@
             }
             console.log(dsCauHoi)
             requestApi('/tao-bo-de', 'POST', {'maCacCauHoi': dsCauHoi})
+            .then(res => {
+                    console.log(res, '-----')
+                })
         }
 
         layCauHoiCanDuyet()

@@ -190,7 +190,9 @@
             data.dsDapAn = dsDapAn
            
             console.log(data)
-            requestApi('/them-cau-hoi', 'POST', data);
+            requestApi('/them-cau-hoi', 'POST', data).then(
+                res => console.log(res)
+            )
         }
 
         function onViewQuestion() {
