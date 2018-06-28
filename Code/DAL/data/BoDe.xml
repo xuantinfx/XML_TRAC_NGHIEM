@@ -180,4 +180,28 @@
       <CAU Ma_cau_hoi="11"/>
     </DS_CAU_HOI>
   </DE>
+  <DE Ma_de="18" Ma_nguoi_tao="12">
+    <DS_CAU_HOI>
+      <CAU Ma_cau_hoi=""/>
+    </DS_CAU_HOI>
+  </DE>
+  <DE Ma_de="19" Ma_nguoi_tao="12">
+    <DS_CAU_HOI>
+      <CAU Ma_cau_hoi="3"/>
+      <CAU Ma_cau_hoi="4"/>
+      <CAU Ma_cau_hoi="9"/>
+    </DS_CAU_HOI>
+  </DE>
+  <DE Ma_de="20" Ma_nguoi_tao="12">
+    <DS_CAU_HOI>
+      <CAU Ma_cau_hoi=""/>
+    </DS_CAU_HOI>
+  </DE>
+  <DE Ma_de="21" Ma_nguoi_tao="12">
+    <DS_CAU_HOI>
+      <CAU Ma_cau_hoi="3"/>
+      <CAU Ma_cau_hoi="4"/>
+      <CAU Ma_cau_hoi="9"/>
+    </DS_CAU_HOI>
+  </DE>
 </DS_BO_DE>

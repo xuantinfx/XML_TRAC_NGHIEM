@@ -119,13 +119,24 @@ http
             });
             req.on('end', function () {
               let cauHoiMoi = JSON.parse(body);
+              console.log(cauHoiMoi);
               cauHoiMoi.maNguoiDang = user.ma
-              let result = BUS.themCauHoi(Cache[cauHoi], cauHoiMoi);
+              BUS.themCauHoi(Cache[cauHoi], cauHoiMoi)
+              .then(newCache => {
+                Cache[cauHoi] = newCache;
+              })
+              .catch(err => {
+                console.log(err);
+              })
             })
             break
           }
         case '/duyet-cau-hoi':
           {
+            if(!user.laQuanLy) {
+              res.end("need login")
+              return;
+            }
             let body = '';
             req.on('data', function (data) {
               body += data;
@@ -137,13 +148,23 @@ http
             req.on('end', function () {
               console.log(typeof (body), body);
               let postdata = JSON.parse(body);
-              let result = BUS.duyetCauHoi(Cache[cauHoi], postdata);
+              BUS.duyetCauHoi(Cache[cauHoi], postdata)
+              .then(newCache => {
+                Cache[cauHoi] = newCache;
+              })
+              .catch(err => {
+                console.log(err);
+              })
             })
             break
           }
         case '/tao-bo-de':
           {
             let body = '';
+            if(!user.laQuanLy) {
+              res.end("need login")
+              return;
+            }
             req.on('data', function (data) {
               body += data;
 
@@ -156,7 +177,13 @@ http
               let postdata = JSON.parse(body);
               postdata.maCacCauHoi = postdata.maCacCauHoi.split(';')
               console.log(postdata)
-              let result = BUS.taoBoDe(Cache[cauHoi], postdata);
+              BUS.taoBoDe(Cache[cauHoi], postdata)
+              .then(newCache => {
+                Cache[boDe] = newCache;
+              })
+              .catch(err => {
+                console.log(err);
+              })
             })
             break
           }
