@@ -182,15 +182,6 @@ module.exports.themCauHoi = async (XMLDOMCauHoi, data) => {
           if (body == '') {
             return reject(new Error('respone data is empty'))
           }
-          // this.InitCache(URL_DAL, (err, result) => {
-          //   if (err) {
-          //     console.log(err);
-          //     return;
-          //   }
-          //   Cache = result;
-          //   console.log("Đã cập nhật Cache xong!");
-          //   //console.log(Cache);
-          // });
           parseXML(body).then(result => {
             return resolve(result);
           }).catch(err => {
@@ -252,7 +243,6 @@ module.exports.duyetCauHoi = async (XMLDOMCauHoi, data) => {
 
 module.exports.taoBoDe = async (XMLDOMCauHoi, data) => {
   return new Promise((resolve, reject) => {
-    data.maNguoiTao = "12";
     console.log(data, '-------')
     request({
         headers: {

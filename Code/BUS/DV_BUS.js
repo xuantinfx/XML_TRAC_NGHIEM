@@ -27,6 +27,7 @@ BUS.InitCache(URL_DAL, (err, result) => {
 http
   .createServer(async (req, res) => {
     console.log(req.method, req.url);
+    res.statusCode = 200;
 
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Access-Control-Allow-Credentials", "true");
@@ -163,10 +164,10 @@ http
         case '/tao-bo-de':
           {
             let body = '';
-            // if(!user.laQuanLy) {
-            //   res.end("need login")
-            //   return;
-            // }
+            if(!user.laQuanLy) {
+              res.end("need login")
+              return;
+            }
             req.on('data', function (data) {
               body += data;
 
@@ -179,6 +180,7 @@ http
               let postdata = JSON.parse(body);
               postdata.maCacCauHoi = postdata.maCacCauHoi.split(';')
               console.log(postdata)
+              postdata.maNguoiTao = user.ma;
               BUS.taoBoDe(Cache[cauHoi], postdata)
               .then(newCache => {
                 Cache[boDe] = newCache;
@@ -187,7 +189,7 @@ http
                 console.log(err);
               })
               console.log('End.....')
-            res.end('')
+              res.end('sadasdsas')
             return;
               
             })

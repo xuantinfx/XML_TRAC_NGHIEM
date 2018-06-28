@@ -109,7 +109,7 @@
                  <td style="vertical-align: top">
                 <div class="dropdown-list" style="background-color: lightblue; width: 400px; max-width: 1000px" align="center">
                 <label class="bg-info card card-header" style="color: white; width: 100%; font-size: 30px">Xem câu hỏi</label>
-                <input list="bo-cau-hoi-xem" class="form-inline form-control" placeholder="Chọn câu hỏi" id="cau_hoi_can_xem">
+                <input list="bo-cau-hoi-xem" class="form-inline form-control" value="Câu 1" placeholder="Chọn câu hỏi" id="cau_hoi_can_xem">
                 <br>
                 <datalist id="bo-cau-hoi-xem" >
                   <option value="Câu 1">
@@ -193,6 +193,10 @@
             requestApi('/them-cau-hoi', 'POST', data).then(
                 res => console.log(res)
             )
+            setTimeout(() =>{
+                alert("Đã thêm câu hỏi thành công")
+                location.reload();
+            }, 100)
         }
 
         function onViewQuestion() {

@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <DS_NGUOI_DUNG>
   <DS_GIAO_VIEN>
-    <GIAO_VIEN Ma_giao_vien="1" Ten="TinTin" Mat_khau="lol"/>
-    <GIAO_VIEN Ma_giao_vien="2" Ten="Tin" Mat_khau="123"/>
-    <GIAO_VIEN Ma_giao_vien="3" Ten="Dao Xuan Tin" Mat_khau="12345"/>
-    <GIAO_VIEN Ma_giao_vien="4" Ten="Dao Xuan Tin" Mat_khau="12345"/>
+    <GIAO_VIEN Ma_giao_vien="1" Ten="TinTin" Mat_khau="123"/>
+    <GIAO_VIEN Ma_giao_vien="2" Ten="TrinhTrinh" Mat_khau="123"/>
   </DS_GIAO_VIEN>
   <DS_QUAN_LY>
-    <QUAN_LY Ma_quan_ly="3"   Ten="Trinh" Mat_khau="456"/>
-    <QUAN_LY Ma_quan_ly="4" Ten="Trinh" Mat_khau="456"/>
-    <QUAN_LY Ma_quan_ly="5" Ten="TinTin" Mat_khau="lol"/>
-    <QUAN_LY Ma_quan_ly="6" Ten="Dao Xuan Tin" Mat_khau="12345"/>
-    <QUAN_LY Ma_quan_ly="7" Ten="Dao Xuan Tin" Mat_khau="12345"/>
+    <QUAN_LY Ma_quan_ly="1"   Ten="Trinh" Mat_khau="456"/>
+    <QUAN_LY Ma_quan_ly="2" Ten="Tin" Mat_khau="456"/>
   </DS_QUAN_LY>
 </DS_NGUOI_DUNG>

@@ -81,5 +81,5 @@ function eraseCookie(name) {
 const logOut = () => {
     eraseCookie("token");
     localStorage.removeItem("token");
-    location.href = "/login"
+    location.href = "/"
 }

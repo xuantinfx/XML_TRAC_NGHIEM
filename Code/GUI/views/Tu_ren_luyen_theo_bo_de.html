@@ -228,7 +228,7 @@
                         let dsDapAnTemp = cauHoi.getElementsByTagName(Tag.DAP_AN);
                         let dsDapAn = [];
                         for (let j = 0; j < dsDapAnTemp.length; j++) {
-                            dsDapAn[j] = parseInt(dsDapAnTemp[j].textContent);
+                            dsDapAn[j] = dsDapAnTemp[j].textContent;
                         }
 
                         dsCauHoiTemp[i] = {

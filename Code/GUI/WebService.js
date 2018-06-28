@@ -68,13 +68,19 @@ http
 
 			if (pathname == "/") {
 				res.writeHead(302, {
-					'Location': '/khach-tham-quan/tu-ren-luyen-tung-cau'
+					'Location': '/trang-chu'
 				});
 				res.end();
 				return;
 			}
 			//API
 			switch (pathname) {
+				case "/trang-chu":
+				{
+					res.setHeader("Content-type", "text/html");
+					res.mySend(__dirname + "/views/Trang_Chu.html");
+					break;
+				}
 				case "/khach-tham-quan/tu-ren-luyen-tung-cau":
 					{
 						res.setHeader("Content-type", "text/html");

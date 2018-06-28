@@ -27,441 +27,47 @@
       <CAU Ma_cau_hoi="5"/>
     </DS_CAU_HOI>
   </DE>
-  <DE Ma_de="3" Ma_nguoi_tao="4">
+  <DE Ma_de="3" Ma_nguoi_tao="12">
     <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="5"/>
-      <CAU Ma_cau_hoi="6"/>
-      <CAU Ma_cau_hoi="7"/>
       <CAU Ma_cau_hoi="1"/>
-      <CAU Ma_cau_hoi="2"/>
-      <CAU Ma_cau_hoi="14"/>
-      <CAU Ma_cau_hoi="5"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="4" Ma_nguoi_tao="4">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="6"/>
-      <CAU Ma_cau_hoi="1"/>
-      <CAU Ma_cau_hoi="3"/>
-      <CAU Ma_cau_hoi="5"/>
-      <CAU Ma_cau_hoi="7"/>
       <CAU Ma_cau_hoi="4"/>
-      <CAU Ma_cau_hoi="1"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="5" Ma_nguoi_tao="4">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="1"/>
+      <CAU Ma_cau_hoi="5"/>
       <CAU Ma_cau_hoi="9"/>
-      <CAU Ma_cau_hoi="2"/>
-      <CAU Ma_cau_hoi="4"/>
-      <CAU Ma_cau_hoi="5"/>
-      <CAU Ma_cau_hoi="14"/>
-      <CAU Ma_cau_hoi="12"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="6" Ma_nguoi_tao="4">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="1"/>
+      <CAU Ma_cau_hoi="8"/>
       <CAU Ma_cau_hoi="9"/>
-      <CAU Ma_cau_hoi="2"/>
-      <CAU Ma_cau_hoi="4"/>
+      <CAU Ma_cau_hoi="6"/>
       <CAU Ma_cau_hoi="5"/>
-      <CAU Ma_cau_hoi="14"/>
+      <CAU Ma_cau_hoi="16"/>
+      <CAU Ma_cau_hoi="9"/>
       <CAU Ma_cau_hoi="13"/>
+      <CAU Ma_cau_hoi="9"/>
+      <CAU Ma_cau_hoi="13"/>
+      <CAU Ma_cau_hoi="9"/>
+      <CAU Ma_cau_hoi="20"/>
     </DS_CAU_HOI>
   </DE>
-  <DE Ma_de="7" Ma_nguoi_tao="4">
+  <DE Ma_de="4" Ma_nguoi_tao="3">
     <DS_CAU_HOI>
       <CAU Ma_cau_hoi="1"/>
-      <CAU Ma_cau_hoi="9"/>
       <CAU Ma_cau_hoi="2"/>
-      <CAU Ma_cau_hoi="4"/>
-      <CAU Ma_cau_hoi="5"/>
-      <CAU Ma_cau_hoi="14"/>
-      <CAU Ma_cau_hoi="10"/>
+      <CAU Ma_cau_hoi="3"/>
     </DS_CAU_HOI>
   </DE>
-  <DE Ma_de="8" Ma_nguoi_tao="4">
+  <DE Ma_de="5" Ma_nguoi_tao="3">
     <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="1"/>
       <CAU Ma_cau_hoi="9"/>
       <CAU Ma_cau_hoi="2"/>
-      <CAU Ma_cau_hoi="4"/>
-      <CAU Ma_cau_hoi="5"/>
-      <CAU Ma_cau_hoi="14"/>
-      <CAU Ma_cau_hoi="9"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="9" Ma_nguoi_tao="4">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="1"/>
-      <CAU Ma_cau_hoi="9"/>
       <CAU Ma_cau_hoi="2"/>
-      <CAU Ma_cau_hoi="4"/>
-      <CAU Ma_cau_hoi="5"/>
-      <CAU Ma_cau_hoi="14"/>
+      <CAU Ma_cau_hoi="8"/>
       <CAU Ma_cau_hoi="8"/>
     </DS_CAU_HOI>
   </DE>
-  <DE Ma_de="10" Ma_nguoi_tao="4">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="1"/>
-      <CAU Ma_cau_hoi="9"/>
-      <CAU Ma_cau_hoi="2"/>
-      <CAU Ma_cau_hoi="4"/>
-      <CAU Ma_cau_hoi="5"/>
-      <CAU Ma_cau_hoi="14"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="11" Ma_nguoi_tao="4">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="1"/>
-      <CAU Ma_cau_hoi="9"/>
-      <CAU Ma_cau_hoi="2"/>
-      <CAU Ma_cau_hoi="4"/>
-      <CAU Ma_cau_hoi="5"/>
-      <CAU Ma_cau_hoi="14"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="12" Ma_nguoi_tao="4">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="1"/>
-      <CAU Ma_cau_hoi="9"/>
-      <CAU Ma_cau_hoi="2"/>
-      <CAU Ma_cau_hoi="4"/>
-      <CAU Ma_cau_hoi="5"/>
-      <CAU Ma_cau_hoi="14"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="13" Ma_nguoi_tao="4">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="1"/>
-      <CAU Ma_cau_hoi="9"/>
-      <CAU Ma_cau_hoi="2"/>
-      <CAU Ma_cau_hoi="4"/>
-      <CAU Ma_cau_hoi="5"/>
-      <CAU Ma_cau_hoi="14"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="14" Ma_nguoi_tao="4">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="1"/>
-      <CAU Ma_cau_hoi="9"/>
-      <CAU Ma_cau_hoi="2"/>
-      <CAU Ma_cau_hoi="4"/>
-      <CAU Ma_cau_hoi="5"/>
-      <CAU Ma_cau_hoi="14"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="15" Ma_nguoi_tao="4">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="1"/>
-      <CAU Ma_cau_hoi="9"/>
-      <CAU Ma_cau_hoi="2"/>
-      <CAU Ma_cau_hoi="4"/>
-      <CAU Ma_cau_hoi="5"/>
-      <CAU Ma_cau_hoi="14"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="16" Ma_nguoi_tao="4">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="1"/>
-      <CAU Ma_cau_hoi="9"/>
-      <CAU Ma_cau_hoi="2"/>
-      <CAU Ma_cau_hoi="4"/>
-      <CAU Ma_cau_hoi="5"/>
-      <CAU Ma_cau_hoi="14"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="17" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="7"/>
-      <CAU Ma_cau_hoi="11"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="18" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi=""/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="19" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="3"/>
-      <CAU Ma_cau_hoi="4"/>
-      <CAU Ma_cau_hoi="9"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="20" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi=""/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="21" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="3"/>
-      <CAU Ma_cau_hoi="4"/>
-      <CAU Ma_cau_hoi="9"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="22" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="4"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="23" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="4"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="24" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="2"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="25" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="2"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="26" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="5"/>
-      <CAU Ma_cau_hoi="11"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="27" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi=""/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="28" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="5"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="29" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="9"/>
-      <CAU Ma_cau_hoi="8"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="30" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="9"/>
-      <CAU Ma_cau_hoi="8"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="31" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="19"/>
-      <CAU Ma_cau_hoi="15"/>
-      <CAU Ma_cau_hoi="19"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="32" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="19"/>
-      <CAU Ma_cau_hoi="15"/>
-      <CAU Ma_cau_hoi="19"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="33" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="19"/>
-      <CAU Ma_cau_hoi="15"/>
-      <CAU Ma_cau_hoi="19"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="34" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="19"/>
-      <CAU Ma_cau_hoi="15"/>
-      <CAU Ma_cau_hoi="19"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="35" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="19"/>
-      <CAU Ma_cau_hoi="15"/>
-      <CAU Ma_cau_hoi="19"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="36" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="19"/>
-      <CAU Ma_cau_hoi="15"/>
-      <CAU Ma_cau_hoi="19"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="37" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="19"/>
-      <CAU Ma_cau_hoi="15"/>
-      <CAU Ma_cau_hoi="19"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="38" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="19"/>
-      <CAU Ma_cau_hoi="15"/>
-      <CAU Ma_cau_hoi="19"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="39" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="19"/>
-      <CAU Ma_cau_hoi="15"/>
-      <CAU Ma_cau_hoi="19"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="40" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="19"/>
-      <CAU Ma_cau_hoi="15"/>
-      <CAU Ma_cau_hoi="19"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="41" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="19"/>
-      <CAU Ma_cau_hoi="15"/>
-      <CAU Ma_cau_hoi="19"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="42" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="19"/>
-      <CAU Ma_cau_hoi="15"/>
-      <CAU Ma_cau_hoi="19"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="43" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="19"/>
-      <CAU Ma_cau_hoi="15"/>
-      <CAU Ma_cau_hoi="19"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="44" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="19"/>
-      <CAU Ma_cau_hoi="15"/>
-      <CAU Ma_cau_hoi="19"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="45" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="19"/>
-      <CAU Ma_cau_hoi="15"/>
-      <CAU Ma_cau_hoi="19"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="46" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="19"/>
-      <CAU Ma_cau_hoi="15"/>
-      <CAU Ma_cau_hoi="19"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="47" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="19"/>
-      <CAU Ma_cau_hoi="15"/>
-      <CAU Ma_cau_hoi="19"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="48" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="19"/>
-      <CAU Ma_cau_hoi="15"/>
-      <CAU Ma_cau_hoi="19"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="49" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="19"/>
-      <CAU Ma_cau_hoi="15"/>
-      <CAU Ma_cau_hoi="19"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="50" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="19"/>
-      <CAU Ma_cau_hoi="15"/>
-      <CAU Ma_cau_hoi="19"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="51" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="19"/>
-      <CAU Ma_cau_hoi="15"/>
-      <CAU Ma_cau_hoi="19"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="52" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="19"/>
-      <CAU Ma_cau_hoi="15"/>
-      <CAU Ma_cau_hoi="19"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="53" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="19"/>
-      <CAU Ma_cau_hoi="15"/>
-      <CAU Ma_cau_hoi="19"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="54" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="19"/>
-      <CAU Ma_cau_hoi="15"/>
-      <CAU Ma_cau_hoi="19"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="55" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="19"/>
-      <CAU Ma_cau_hoi="15"/>
-      <CAU Ma_cau_hoi="19"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="56" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="19"/>
-      <CAU Ma_cau_hoi="15"/>
-      <CAU Ma_cau_hoi="19"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="57" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="19"/>
-      <CAU Ma_cau_hoi="15"/>
-      <CAU Ma_cau_hoi="19"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="58" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="19"/>
-      <CAU Ma_cau_hoi="15"/>
-      <CAU Ma_cau_hoi="19"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="59" Ma_nguoi_tao="12">
+  <DE Ma_de="6" Ma_nguoi_tao="1">
     <DS_CAU_HOI>
       <CAU Ma_cau_hoi="1"/>
       <CAU Ma_cau_hoi="2"/>
       <CAU Ma_cau_hoi="3"/>
-      <CAU Ma_cau_hoi="5"/>
-    </DS_CAU_HOI>
-  </DE>
-  <DE Ma_de="60" Ma_nguoi_tao="12">
-    <DS_CAU_HOI>
-      <CAU Ma_cau_hoi="1"/>
-      <CAU Ma_cau_hoi="2"/>
-      <CAU Ma_cau_hoi="3"/>
-      <CAU Ma_cau_hoi="5"/>
+      <CAU Ma_cau_hoi="4"/>
     </DS_CAU_HOI>
   </DE>
 </DS_BO_DE>

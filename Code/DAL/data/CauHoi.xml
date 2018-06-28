@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <DS_CAU_HOI>
   <CAU_HOI Ma_cau_hoi="0" Dap_an="0" Da_duyet="true" Ma_nguoi_dang="0" Ma_nguoi_duyet="3">
-    <DE>Đèn đỏ dừng bao nhiêu giâyhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh?</DE>
-    <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">20s</DAP_AN>
-      <DAP_AN Ma_dap_an="1">30s</DAP_AN>
-      <DAP_AN Ma_dap_an="2">50s</DAP_AN>
-      <DAP_AN Ma_dap_an="3">70s</DAP_AN>
-    </DS_DAP_AN>
-  </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="1" Dap_an="0" Da_duyet="true" Ma_nguoi_dang="0" Ma_nguoi_duyet="3">
-    <DE>Đèn đỏ dừng bao nhiêu giâyhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh?</DE>
-    <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">20s</DAP_AN>
-      <DAP_AN Ma_dap_an="1">30s</DAP_AN>
-      <DAP_AN Ma_dap_an="2">50s</DAP_AN>
-      <DAP_AN Ma_dap_an="3">70s</DAP_AN>
-    </DS_DAP_AN>
-  </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="2" Dap_an="0" Da_duyet="true" Ma_nguoi_dang="1">
     <DE>Đèn đỏ dừng bao nhiêu giây?</DE>
     <DS_DAP_AN>
       <DAP_AN Ma_dap_an="0">20s</DAP_AN>
@@ -27,382 +9,202 @@
       <DAP_AN Ma_dap_an="3">70s</DAP_AN>
     </DS_DAP_AN>
   </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="3" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="Trinh">
-    <DE>xuaan tin ddax dep trai</DE>
+  <CAU_HOI Ma_cau_hoi="1" Dap_an="3" Da_duyet="true" Ma_nguoi_dang="0" Ma_nguoi_duyet="3">
+    <DE>Vượt đèn đỏ phạt bao nhiêu tiền?</DE>
     <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">30s</DAP_AN>
-      <DAP_AN Ma_dap_an="1">40s</DAP_AN>
-      <DAP_AN Ma_dap_an="2">50s</DAP_AN>
-      <DAP_AN Ma_dap_an="3">61s</DAP_AN>
+      <DAP_AN Ma_dap_an="0">600k</DAP_AN>
+      <DAP_AN Ma_dap_an="1">700k</DAP_AN>
+      <DAP_AN Ma_dap_an="2">800k</DAP_AN>
+      <DAP_AN Ma_dap_an="3">900k</DAP_AN>
+    </DS_DAP_AN>
+  </CAU_HOI>
+  <CAU_HOI Ma_cau_hoi="2" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="1">
+    <DE>Nồng độ cồn bao nhiêu thì bị phạt?</DE>
+    <DS_DAP_AN>
+      <DAP_AN Ma_dap_an="0">300ml</DAP_AN>
+      <DAP_AN Ma_dap_an="1">400ml</DAP_AN>
+      <DAP_AN Ma_dap_an="2">500ml</DAP_AN>
+      <DAP_AN Ma_dap_an="3">600ml</DAP_AN>
+    </DS_DAP_AN>
+  </CAU_HOI>
+  <CAU_HOI Ma_cau_hoi="3" Dap_an="0" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="Trinh">
+    <DE>Biển báo cấm có hình gì?</DE>
+    <DS_DAP_AN>
+      <DAP_AN Ma_dap_an="0">tròn</DAP_AN>
+      <DAP_AN Ma_dap_an="1">chữ nhật</DAP_AN>
+      <DAP_AN Ma_dap_an="2">vuông</DAP_AN>
+      <DAP_AN Ma_dap_an="3">tam giác</DAP_AN>
     </DS_DAP_AN>
   </CAU_HOI>
   <CAU_HOI Ma_cau_hoi="4" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="Trinh">
-    <DE>xuaan tin ddax dep trai</DE>
+    <DE>Đường bộ gồm</DE>
     <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">30s</DAP_AN>
-      <DAP_AN Ma_dap_an="1">40s</DAP_AN>
-      <DAP_AN Ma_dap_an="2">50s</DAP_AN>
-      <DAP_AN Ma_dap_an="3">61s</DAP_AN>
+      <DAP_AN Ma_dap_an="0">Biển 1</DAP_AN>
+      <DAP_AN Ma_dap_an="1">Biển 2</DAP_AN>
+      <DAP_AN Ma_dap_an="2">Biển 2 và 3</DAP_AN>
+      <DAP_AN Ma_dap_an="3">Biển 4</DAP_AN>
     </DS_DAP_AN>
   </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="5" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="2">
-    <DE>xuaan tin ddax dep trai</DE>
+  <CAU_HOI Ma_cau_hoi="5" Dap_an="2" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="2">
+    <DE>Phương tiện giao thông gồm những loại nào?</DE>
     <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">30s</DAP_AN>
-      <DAP_AN Ma_dap_an="1">40s</DAP_AN>
-      <DAP_AN Ma_dap_an="2">50s</DAP_AN>
-      <DAP_AN Ma_dap_an="3">61s</DAP_AN>
+      <DAP_AN Ma_dap_an="0">Phương tiện giao thông đường bộ và các đường khác</DAP_AN>
+      <DAP_AN Ma_dap_an="1">Xe máy chuyên dùng</DAP_AN>
+      <DAP_AN Ma_dap_an="2">Xe hơi chuyên dùng</DAP_AN>
+      <DAP_AN Ma_dap_an="3">Người đi bộ</DAP_AN>
     </DS_DAP_AN>
   </CAU_HOI>
   <CAU_HOI Ma_cau_hoi="6" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="2">
-    <DE>xuaan tin ddax dep trai</DE>
+    <DE>Điều nào sau đây vi phạm luật giao thông</DE>
     <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">30s</DAP_AN>
-      <DAP_AN Ma_dap_an="1">40s</DAP_AN>
-      <DAP_AN Ma_dap_an="2">50s</DAP_AN>
-      <DAP_AN Ma_dap_an="3">61s</DAP_AN>
+      <DAP_AN Ma_dap_an="0">Chạy 40 km/h</DAP_AN>
+      <DAP_AN Ma_dap_an="1">Chở 3 người trên xe</DAP_AN>
+      <DAP_AN Ma_dap_an="2">Mua bảo hiểm cho xe</DAP_AN>
+      <DAP_AN Ma_dap_an="3">Đội mũ bảo hiểm khi lái xe</DAP_AN>
     </DS_DAP_AN>
   </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="7" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="2">
-    <DE>xuaan tin ddax dep trai</DE>
+  <CAU_HOI Ma_cau_hoi="7" Dap_an="3" Da_duyei="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="2">
+    <DE>Thi bằng lái A1 có những phần nào?</DE>
     <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">30s</DAP_AN>
-      <DAP_AN Ma_dap_an="1">40s</DAP_AN>
-      <DAP_AN Ma_dap_an="2">50s</DAP_AN>
-      <DAP_AN Ma_dap_an="3">61s</DAP_AN>
+      <DAP_AN Ma_dap_an="0">Vấn đáp</DAP_AN>
+      <DAP_AN Ma_dap_an="1">Lý thuyết</DAP_AN>
+      <DAP_AN Ma_dap_an="2">Thực hành</DAP_AN>
+      <DAP_AN Ma_dap_an="3">Cả B và C</DAP_AN>
     </DS_DAP_AN>
   </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="8" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="Trinh">
-    <DE>xuaan tin ddax dep trai</DE>
+  <CAU_HOI Ma_cau_hoi="8" Dap_an="2" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="Trinh">
+    <DE>Mũ bảo hiểm được bắt buộc đội từ năm nào?</DE>
     <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">30s</DAP_AN>
-      <DAP_AN Ma_dap_an="1">40s</DAP_AN>
-      <DAP_AN Ma_dap_an="2">50s</DAP_AN>
-      <DAP_AN Ma_dap_an="3">61s</DAP_AN>
+      <DAP_AN Ma_dap_an="0">2005</DAP_AN>
+      <DAP_AN Ma_dap_an="1">2006</DAP_AN>
+      <DAP_AN Ma_dap_an="2">2007</DAP_AN>
+      <DAP_AN Ma_dap_an="3">2008</DAP_AN>
     </DS_DAP_AN>
   </CAU_HOI>
   <CAU_HOI Ma_cau_hoi="9" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="2">
-    <DE>xuaan tin ddax dep trai</DE>
+    <DE>Đèn xe được yêu cầu bật từ mấy giờ trong  ngày?</DE>
     <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">30s</DAP_AN>
-      <DAP_AN Ma_dap_an="1">40s</DAP_AN>
-      <DAP_AN Ma_dap_an="2">50s</DAP_AN>
-      <DAP_AN Ma_dap_an="3">61s</DAP_AN>
+      <DAP_AN Ma_dap_an="0">5h</DAP_AN>
+      <DAP_AN Ma_dap_an="1">6h</DAP_AN>
+      <DAP_AN Ma_dap_an="2">7h</DAP_AN>
+      <DAP_AN Ma_dap_an="3">8h</DAP_AN>
     </DS_DAP_AN>
   </CAU_HOI>
   <CAU_HOI Ma_cau_hoi="10" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="Trinh">
-    <DE>xuaan tin ddax dep trai</DE>
+    <DE>Bắn tốc độ trên bao nhiêu?</DE>
     <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">30s</DAP_AN>
-      <DAP_AN Ma_dap_an="1">40s</DAP_AN>
-      <DAP_AN Ma_dap_an="2">50s</DAP_AN>
-      <DAP_AN Ma_dap_an="3">61s</DAP_AN>
+      <DAP_AN Ma_dap_an="0">30km</DAP_AN>
+      <DAP_AN Ma_dap_an="1">40km</DAP_AN>
+      <DAP_AN Ma_dap_an="2">50km</DAP_AN>
+      <DAP_AN Ma_dap_an="3">60km</DAP_AN>
     </DS_DAP_AN>
   </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="11" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="2">
-    <DE>xuaan tin ddax dep trai</DE>
+  <CAU_HOI Ma_cau_hoi="11" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="Trinh">
+    <DE>Đèn vàng dừng bao nhiêu giây?</DE>
     <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">30s</DAP_AN>
-      <DAP_AN Ma_dap_an="1">40s</DAP_AN>
+      <DAP_AN Ma_dap_an="0">20s</DAP_AN>
+      <DAP_AN Ma_dap_an="1">30s</DAP_AN>
       <DAP_AN Ma_dap_an="2">50s</DAP_AN>
-      <DAP_AN Ma_dap_an="3">61s</DAP_AN>
+      <DAP_AN Ma_dap_an="3">70s</DAP_AN>
     </DS_DAP_AN>
   </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="12" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="2">
-    <DE>xuaan tin ddax dep trai</DE>
+  <CAU_HOI Ma_cau_hoi="12" Dap_an="3" Da_duyet="true" Ma_nguoi_dang="0" Ma_nguoi_duyet="3">
+    <DE>Vượt đèn đỏ phạt bao nhiêu tiền?</DE>
     <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">30s</DAP_AN>
-      <DAP_AN Ma_dap_an="1">40s</DAP_AN>
-      <DAP_AN Ma_dap_an="2">50s</DAP_AN>
-      <DAP_AN Ma_dap_an="3">61s</DAP_AN>
+      <DAP_AN Ma_dap_an="0">600k</DAP_AN>
+      <DAP_AN Ma_dap_an="1">700k</DAP_AN>
+      <DAP_AN Ma_dap_an="2">800k</DAP_AN>
+      <DAP_AN Ma_dap_an="3">900k</DAP_AN>
     </DS_DAP_AN>
   </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="13" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="Trinh">
-    <DE>xuaan tin ddax dep trai</DE>
+  <CAU_HOI Ma_cau_hoi="13" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="1">
+    <DE>Nồng độ cồn bao nhiêu thì bị phạt?</DE>
     <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">30s</DAP_AN>
-      <DAP_AN Ma_dap_an="1">40s</DAP_AN>
-      <DAP_AN Ma_dap_an="2">50s</DAP_AN>
-      <DAP_AN Ma_dap_an="3">61s</DAP_AN>
+      <DAP_AN Ma_dap_an="0">300ml</DAP_AN>
+      <DAP_AN Ma_dap_an="1">400ml</DAP_AN>
+      <DAP_AN Ma_dap_an="2">500ml</DAP_AN>
+      <DAP_AN Ma_dap_an="3">600ml</DAP_AN>
+    </DS_DAP_AN>
+  </CAU_HOI>
+  <CAU_HOI Ma_cau_hoi="14" Dap_an="0" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="Trinh">
+    <DE>Biển báo cấm có hình gì?</DE>
+    <DS_DAP_AN>
+      <DAP_AN Ma_dap_an="0">tròn</DAP_AN>
+      <DAP_AN Ma_dap_an="1">chữ nhật</DAP_AN>
+      <DAP_AN Ma_dap_an="2">vuông</DAP_AN>
+      <DAP_AN Ma_dap_an="3">tam giác</DAP_AN>
     </DS_DAP_AN>
   </CAU_HOI>
   <CAU_HOI Ma_cau_hoi="15" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="Trinh">
-    <DE>xuaan tin ddax dep trai</DE>
+    <DE>Đường bộ gồm</DE>
     <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">30s</DAP_AN>
-      <DAP_AN Ma_dap_an="1">40s</DAP_AN>
-      <DAP_AN Ma_dap_an="2">50s</DAP_AN>
-      <DAP_AN Ma_dap_an="3">61s</DAP_AN>
+      <DAP_AN Ma_dap_an="0">Biển 1</DAP_AN>
+      <DAP_AN Ma_dap_an="1">Biển 2</DAP_AN>
+      <DAP_AN Ma_dap_an="2">Biển 2 và 3</DAP_AN>
+      <DAP_AN Ma_dap_an="3">Biển 4</DAP_AN>
     </DS_DAP_AN>
   </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="16" Dap_an="3" Da_duyet="true" Ma_nguoi_dang="1" Ma_nguoi_duyet="Trinh">
-    <DE>123456</DE>
+  <CAU_HOI Ma_cau_hoi="16" Dap_an="2" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="2">
+    <DE>Phương tiện giao thông gồm những loại nào?</DE>
     <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
-      <DAP_AN Ma_dap_an="1">ádkj</DAP_AN>
-      <DAP_AN Ma_dap_an="2">kajaskd</DAP_AN>
-      <DAP_AN Ma_dap_an="3">kdjkd</DAP_AN>
+      <DAP_AN Ma_dap_an="0">Phương tiện giao thông đường bộ và các đường khác</DAP_AN>
+      <DAP_AN Ma_dap_an="1">Xe máy chuyên dùng</DAP_AN>
+      <DAP_AN Ma_dap_an="2">Xe hơi chuyên dùng</DAP_AN>
+      <DAP_AN Ma_dap_an="3">Người đi bộ</DAP_AN>
     </DS_DAP_AN>
   </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="17" Dap_an="3" Da_duyet="true" Ma_nguoi_dang="1" Ma_nguoi_duyet="Trinh">
-    <DE>123456</DE>
+  <CAU_HOI Ma_cau_hoi="17" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="2">
+    <DE>Điều nào sau đây vi phạm luật giao thông</DE>
     <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
-      <DAP_AN Ma_dap_an="1">ádkj</DAP_AN>
-      <DAP_AN Ma_dap_an="2">kajaskd</DAP_AN>
-      <DAP_AN Ma_dap_an="3">kdjkd</DAP_AN>
+      <DAP_AN Ma_dap_an="0">Chạy 40 km/h</DAP_AN>
+      <DAP_AN Ma_dap_an="1">Chở 3 người trên xe</DAP_AN>
+      <DAP_AN Ma_dap_an="2">Mua bảo hiểm cho xe</DAP_AN>
+      <DAP_AN Ma_dap_an="3">Đội mũ bảo hiểm khi lái xe</DAP_AN>
     </DS_DAP_AN>
   </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="18" Dap_an="3" Da_duyet="true" Ma_nguoi_dang="1" Ma_nguoi_duyet="Trinh">
-    <DE>123456</DE>
+  <CAU_HOI Ma_cau_hoi="18" Dap_an="3" Da_duyei="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="2">
+    <DE>Thi bằng lái A1 có những phần nào?</DE>
     <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
-      <DAP_AN Ma_dap_an="1">ádkj</DAP_AN>
-      <DAP_AN Ma_dap_an="2">kajaskd</DAP_AN>
-      <DAP_AN Ma_dap_an="3">kdjkd</DAP_AN>
+      <DAP_AN Ma_dap_an="0">Vấn đáp</DAP_AN>
+      <DAP_AN Ma_dap_an="1">Lý thuyết</DAP_AN>
+      <DAP_AN Ma_dap_an="2">Thực hành</DAP_AN>
+      <DAP_AN Ma_dap_an="3">Cả B và C</DAP_AN>
     </DS_DAP_AN>
   </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="19" Dap_an="3" Da_duyet="true" Ma_nguoi_dang="1" Ma_nguoi_duyet="Trinh">
-    <DE>123456</DE>
+  <CAU_HOI Ma_cau_hoi="19" Dap_an="2" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="Trinh">
+    <DE>Mũ bảo hiểm được bắt buộc đội từ năm nào?</DE>
     <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
-      <DAP_AN Ma_dap_an="1">ádkj</DAP_AN>
-      <DAP_AN Ma_dap_an="2">kajaskd</DAP_AN>
-      <DAP_AN Ma_dap_an="3">kdjkd</DAP_AN>
+      <DAP_AN Ma_dap_an="0">2005</DAP_AN>
+      <DAP_AN Ma_dap_an="1">2006</DAP_AN>
+      <DAP_AN Ma_dap_an="2">2007</DAP_AN>
+      <DAP_AN Ma_dap_an="3">2008</DAP_AN>
     </DS_DAP_AN>
   </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="20" Dap_an="3" Da_duyet="true" Ma_nguoi_dang="1" Ma_nguoi_duyet="Trinh">
-    <DE>123456</DE>
+  <CAU_HOI Ma_cau_hoi="20" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="2">
+    <DE>Đèn xe được yêu cầu bật từ mấy giờ trong  ngày?</DE>
     <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
-      <DAP_AN Ma_dap_an="1">ádkj</DAP_AN>
-      <DAP_AN Ma_dap_an="2">kajaskd</DAP_AN>
-      <DAP_AN Ma_dap_an="3">kdjkd</DAP_AN>
+      <DAP_AN Ma_dap_an="0">5h</DAP_AN>
+      <DAP_AN Ma_dap_an="1">6h</DAP_AN>
+      <DAP_AN Ma_dap_an="2">7h</DAP_AN>
+      <DAP_AN Ma_dap_an="3">8h</DAP_AN>
     </DS_DAP_AN>
   </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="21" Dap_an="3" Da_duyet="true" Ma_nguoi_dang="1" Ma_nguoi_duyet="Trinh">
-    <DE>123456</DE>
+  <CAU_HOI Ma_cau_hoi="21" Dap_an="1" Da_duyet="true" Ma_nguoi_dang="3" Ma_nguoi_duyet="Trinh">
+    <DE>Bắn tốc độ trên bao nhiêu?</DE>
     <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
-      <DAP_AN Ma_dap_an="1">ádkj</DAP_AN>
-      <DAP_AN Ma_dap_an="2">kajaskd</DAP_AN>
-      <DAP_AN Ma_dap_an="3">kdjkd</DAP_AN>
+      <DAP_AN Ma_dap_an="0">30km</DAP_AN>
+      <DAP_AN Ma_dap_an="1">40km</DAP_AN>
+      <DAP_AN Ma_dap_an="2">50km</DAP_AN>
+      <DAP_AN Ma_dap_an="3">60km</DAP_AN>
     </DS_DAP_AN>
   </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="22" Dap_an="3" Da_duyet="true" Ma_nguoi_dang="1" Ma_nguoi_duyet="Trinh">
-    <DE>123456</DE>
+  <CAU_HOI Ma_cau_hoi="22" Dap_an="0" Da_duyet="true" Ma_nguoi_dang="1" Ma_nguoi_duyet="Trinh">
+    <DE>Câu này để test hệ thống</DE>
     <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
-      <DAP_AN Ma_dap_an="1">ádkj</DAP_AN>
-      <DAP_AN Ma_dap_an="2">kajaskd</DAP_AN>
-      <DAP_AN Ma_dap_an="3">kdjkd</DAP_AN>
-    </DS_DAP_AN>
-  </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="23" Dap_an="3" Da_duyet="true" Ma_nguoi_dang="1" Ma_nguoi_duyet="Trinh">
-    <DE>123456</DE>
-    <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
-      <DAP_AN Ma_dap_an="1">ádkj</DAP_AN>
-      <DAP_AN Ma_dap_an="2">kajaskd</DAP_AN>
-      <DAP_AN Ma_dap_an="3">kdjkd</DAP_AN>
-    </DS_DAP_AN>
-  </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="24" Dap_an="0" Da_duyet="true" Ma_nguoi_dang="1" Ma_nguoi_duyet="Trinh">
-    <DE/>
-    <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0"/>
-      <DAP_AN Ma_dap_an="1"/>
-      <DAP_AN Ma_dap_an="2"/>
-      <DAP_AN Ma_dap_an="3"/>
-    </DS_DAP_AN>
-  </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="25" Dap_an="0" Da_duyet="true" Ma_nguoi_dang="1" Ma_nguoi_duyet="Trinh">
-    <DE/>
-    <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0"/>
-      <DAP_AN Ma_dap_an="1"/>
-      <DAP_AN Ma_dap_an="2"/>
-      <DAP_AN Ma_dap_an="3"/>
-    </DS_DAP_AN>
-  </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="26" Dap_an="0" Da_duyet="true" Ma_nguoi_dang="1" Ma_nguoi_duyet="Trinh">
-    <DE>ai là</DE>
-    <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">123</DAP_AN>
-      <DAP_AN Ma_dap_an="1">k</DAP_AN>
-      <DAP_AN Ma_dap_an="2">k</DAP_AN>
-      <DAP_AN Ma_dap_an="3">dfn</DAP_AN>
-    </DS_DAP_AN>
-  </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="27" Dap_an="0" Da_duyet="true" Ma_nguoi_dang="1" Ma_nguoi_duyet="Trinh">
-    <DE>ai là</DE>
-    <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">123</DAP_AN>
-      <DAP_AN Ma_dap_an="1">k</DAP_AN>
-      <DAP_AN Ma_dap_an="2">k</DAP_AN>
-      <DAP_AN Ma_dap_an="3">dfn</DAP_AN>
-    </DS_DAP_AN>
-  </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="28" Dap_an="0" Da_duyet="true" Ma_nguoi_dang="1" Ma_nguoi_duyet="Trinh">
-    <DE>abc</DE>
-    <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
-      <DAP_AN Ma_dap_an="1">dm</DAP_AN>
-      <DAP_AN Ma_dap_an="2">vl</DAP_AN>
-      <DAP_AN Ma_dap_an="3">lsdkfew</DAP_AN>
-    </DS_DAP_AN>
-  </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="29" Dap_an="0" Da_duyet="true" Ma_nguoi_dang="1" Ma_nguoi_duyet="Trinh">
-    <DE>abc</DE>
-    <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
-      <DAP_AN Ma_dap_an="1">dm</DAP_AN>
-      <DAP_AN Ma_dap_an="2">vl</DAP_AN>
-      <DAP_AN Ma_dap_an="3">lsdkfew</DAP_AN>
-    </DS_DAP_AN>
-  </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="30" Dap_an="0" Da_duyet="true" Ma_nguoi_dang="1" Ma_nguoi_duyet="Trinh">
-    <DE>abc</DE>
-    <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
-      <DAP_AN Ma_dap_an="1">dm</DAP_AN>
-      <DAP_AN Ma_dap_an="2">vl</DAP_AN>
-      <DAP_AN Ma_dap_an="3">lsdkfew</DAP_AN>
-    </DS_DAP_AN>
-  </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="31" Dap_an="0" Da_duyet="true" Ma_nguoi_dang="1" Ma_nguoi_duyet="Trinh">
-    <DE>abc</DE>
-    <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
-      <DAP_AN Ma_dap_an="1">dm</DAP_AN>
-      <DAP_AN Ma_dap_an="2">vl</DAP_AN>
-      <DAP_AN Ma_dap_an="3">lsdkfew</DAP_AN>
-    </DS_DAP_AN>
-  </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="32" Dap_an="0" Da_duyet="true" Ma_nguoi_dang="1" Ma_nguoi_duyet="Trinh">
-    <DE>abc</DE>
-    <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
-      <DAP_AN Ma_dap_an="1">dm</DAP_AN>
-      <DAP_AN Ma_dap_an="2">vl</DAP_AN>
-      <DAP_AN Ma_dap_an="3">lsdkfew</DAP_AN>
-    </DS_DAP_AN>
-  </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="33" Dap_an="0" Da_duyet="false" Ma_nguoi_dang="1">
-    <DE>abc</DE>
-    <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
-      <DAP_AN Ma_dap_an="1">dm</DAP_AN>
-      <DAP_AN Ma_dap_an="2">vl</DAP_AN>
-      <DAP_AN Ma_dap_an="3">lsdkfew</DAP_AN>
-    </DS_DAP_AN>
-  </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="34" Dap_an="0" Da_duyet="false" Ma_nguoi_dang="1">
-    <DE>abc jlkjkl hjkhkj</DE>
-    <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
-      <DAP_AN Ma_dap_an="1">dm</DAP_AN>
-      <DAP_AN Ma_dap_an="2">vl</DAP_AN>
-      <DAP_AN Ma_dap_an="3">lsdkfew</DAP_AN>
-    </DS_DAP_AN>
-  </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="35" Dap_an="0" Da_duyet="false" Ma_nguoi_dang="1">
-    <DE>abc jlkjkl hjkhkj</DE>
-    <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
-      <DAP_AN Ma_dap_an="1">dm</DAP_AN>
-      <DAP_AN Ma_dap_an="2">vl</DAP_AN>
-      <DAP_AN Ma_dap_an="3">lsdkfew</DAP_AN>
-    </DS_DAP_AN>
-  </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="36" Dap_an="0" Da_duyet="false" Ma_nguoi_dang="1">
-    <DE>abc jlkjkl hjkhkj</DE>
-    <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
-      <DAP_AN Ma_dap_an="1">dm</DAP_AN>
-      <DAP_AN Ma_dap_an="2">vl</DAP_AN>
-      <DAP_AN Ma_dap_an="3">lsdkfew</DAP_AN>
-    </DS_DAP_AN>
-  </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="37" Dap_an="0" Da_duyet="false" Ma_nguoi_dang="1">
-    <DE>abc jlkjkl hjkhkj</DE>
-    <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
-      <DAP_AN Ma_dap_an="1">dm</DAP_AN>
-      <DAP_AN Ma_dap_an="2">vl</DAP_AN>
-      <DAP_AN Ma_dap_an="3">lsdkfew</DAP_AN>
-    </DS_DAP_AN>
-  </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="38" Dap_an="3" Da_duyet="false" Ma_nguoi_dang="1">
-    <DE>abc jlkjkl hjkhkj</DE>
-    <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
-      <DAP_AN Ma_dap_an="1">dm</DAP_AN>
-      <DAP_AN Ma_dap_an="2">vl</DAP_AN>
-      <DAP_AN Ma_dap_an="3">lsdkfew</DAP_AN>
-    </DS_DAP_AN>
-  </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="39" Dap_an="3" Da_duyet="false" Ma_nguoi_dang="1">
-    <DE>abc jlkjkl hjkhkj</DE>
-    <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
-      <DAP_AN Ma_dap_an="1">dm</DAP_AN>
-      <DAP_AN Ma_dap_an="2">vl</DAP_AN>
-      <DAP_AN Ma_dap_an="3">lsdkfew</DAP_AN>
-    </DS_DAP_AN>
-  </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="40" Dap_an="3" Da_duyet="false" Ma_nguoi_dang="1">
-    <DE>Abcdefew</DE>
-    <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
-      <DAP_AN Ma_dap_an="1">dm</DAP_AN>
-      <DAP_AN Ma_dap_an="2">vl</DAP_AN>
-      <DAP_AN Ma_dap_an="3">lsdkfew</DAP_AN>
-    </DS_DAP_AN>
-  </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="41" Dap_an="3" Da_duyet="false" Ma_nguoi_dang="1">
-    <DE>Abcdefew</DE>
-    <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">clgt</DAP_AN>
-      <DAP_AN Ma_dap_an="1">dm</DAP_AN>
-      <DAP_AN Ma_dap_an="2">vl</DAP_AN>
-      <DAP_AN Ma_dap_an="3">lsdkfew</DAP_AN>
-    </DS_DAP_AN>
-  </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="42" Dap_an="2" Da_duyet="false" Ma_nguoi_dang="1">
-    <DE/>
-    <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0"/>
-      <DAP_AN Ma_dap_an="1"/>
-      <DAP_AN Ma_dap_an="2"/>
-      <DAP_AN Ma_dap_an="3"/>
-    </DS_DAP_AN>
-  </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="43" Dap_an="2" Da_duyet="false" Ma_nguoi_dang="1">
-    <DE/>
-    <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0"/>
-      <DAP_AN Ma_dap_an="1"/>
-      <DAP_AN Ma_dap_an="2"/>
-      <DAP_AN Ma_dap_an="3"/>
-    </DS_DAP_AN>
-  </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="44" Dap_an="2" Da_duyet="false" Ma_nguoi_dang="1">
-    <DE>ử23rewr</DE>
-    <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">sdf</DAP_AN>
-      <DAP_AN Ma_dap_an="1">sdf</DAP_AN>
-      <DAP_AN Ma_dap_an="2">ảg</DAP_AN>
-      <DAP_AN Ma_dap_an="3">re</DAP_AN>
-    </DS_DAP_AN>
-  </CAU_HOI>
-  <CAU_HOI Ma_cau_hoi="45" Dap_an="2" Da_duyet="false" Ma_nguoi_dang="1">
-    <DE>ử23rewr</DE>
-    <DS_DAP_AN>
-      <DAP_AN Ma_dap_an="0">sdf</DAP_AN>
-      <DAP_AN Ma_dap_an="1">sdf</DAP_AN>
-      <DAP_AN Ma_dap_an="2">ảg</DAP_AN>
-      <DAP_AN Ma_dap_an="3">re</DAP_AN>
+      <DAP_AN Ma_dap_an="0">đáp án a</DAP_AN>
+      <DAP_AN Ma_dap_an="1">đáp án b</DAP_AN>
+      <DAP_AN Ma_dap_an="2">đáp án c</DAP_AN>
+      <DAP_AN Ma_dap_an="3">đáp án d</DAP_AN>
     </DS_DAP_AN>
   </CAU_HOI>
 </DS_CAU_HOI>

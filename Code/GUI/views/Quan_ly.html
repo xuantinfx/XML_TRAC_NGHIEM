@@ -97,7 +97,7 @@
                             <span>Đáp án</span>
                             <select disabled="true">
                                 <option value="A" id='dap_an_duyet'>A</option>
-                                
+
                             </select>
                         </div>
                         <div align="center" style="background-color: lightblue">
@@ -106,7 +106,7 @@
                                 <button class="btn btn-primary" onClick="onDuyet()" id="btn_duyet">Duyệt </button>
                             </div>
                             <br>
-                            
+
                         </div>
                     </div>
                 </td>
@@ -134,7 +134,7 @@
                 <td style="vertical-align: top">
                     <div class="dropdown-list" style="background-color: lightblue; width: 400px; max-width: 1000px" align="center">
                         <label class="bg-info card card-header" style="color: white; width: 100%; font-size: 30px">Xem câu hỏi</label>
-                        <input id="ma_cau_hoi_xem" list="bo-cau-hoi-xem" class="form-inline form-control" placeholder="Chọn câu hỏi">
+                        <input id="ma_cau_hoi_xem" list="bo-cau-hoi-xem" value="Câu 1" class="form-inline form-control" placeholder="Chọn câu hỏi">
                         <br>
                         <datalist id="bo-cau-hoi-xem">
                             <option value="Câu 1">
@@ -236,29 +236,32 @@
             requestApi('/lay-danh-sach-cau-hoi', 'GET', {}).then(res => {
                 let dsCauHoi = res.getElementsByTagName('CAU_HOI')
                 let ok = 0
-                
+
                 for (let j = 0; j < dsCauHoi.length; ++j) {
                     let data = dsCauHoi[j]
                     if (data.getAttribute('Da_duyet') == 'false') {
                         document.getElementById('cau_hoi_duyet').value = data.getElementsByTagName('DE')[0].innerHTML
                         for (let i = 0; i < 4; ++i) {
-                            document.getElementById('da_' + i + '_duyet').value = data.getElementsByTagName('DAP_AN')[i].innerHTML
+                            document.getElementById('da_' + i + '_duyet').value = data.getElementsByTagName(
+                                'DAP_AN')[i].innerHTML
                         }
-                            
+
                         let dapAn = data.getAttribute('Dap_an')
-                        document.getElementById('dap_an_duyet').innerHTML = String.fromCharCode(dapAn.charCodeAt() - 48 + 65)
+                        document.getElementById('dap_an_duyet').innerHTML = String.fromCharCode(dapAn.charCodeAt() -
+                            48 + 65)
                         document.getElementById('btn_duyet').removeAttribute('disabled')
-                        document.getElementById('cau_hoi_duyet').setAttribute('ma_cau_hoi', data.getAttribute('Ma_cau_hoi'))
+                        document.getElementById('cau_hoi_duyet').setAttribute('ma_cau_hoi', data.getAttribute(
+                            'Ma_cau_hoi'))
                         ok = 1
                     }
                     if (ok == 1) break
                 }
                 if (ok == 0) {
-                    document.getElementById('btn_duyet').setAttribute('disabled', 'true')            
+                    document.getElementById('btn_duyet').setAttribute('disabled', 'true')
                     document.getElementById('cau_hoi_duyet').value = 'Không có câu hỏi chưa duyệt!'
                 }
             })
-            
+
         }
 
         function onViewQuestion() {
@@ -268,11 +271,13 @@
                 'maCauHoi': maCauHoi
             }
             requestApi('/lay-cau-hoi', 'GET', params).then(data => {
-                document.getElementById('cau_hoi_xem').innerHTML = 'Câu ' + maCauHoi + ': ' + data.getElementsByTagName('DE')[0].innerHTML
+                document.getElementById('cau_hoi_xem').innerHTML = 'Câu ' + maCauHoi + ': ' + data.getElementsByTagName(
+                    'DE')[0].innerHTML
                 for (let i = 0; i < 4; ++i) {
-                    document.getElementById('da_' + i + '_xem').innerHTML = data.getElementsByTagName('DAP_AN')[i].innerHTML
+                    document.getElementById('da_' + i + '_xem').innerHTML = data.getElementsByTagName('DAP_AN')[
+                        i].innerHTML
                 }
-                    
+
                 let dapAn = data.getElementsByTagName('CAU_HOI')[0].getAttribute('Dap_an')
                 document.getElementById('input_' + dapAn + '_xem').setAttribute('checked', 'true')
             })
@@ -281,14 +286,22 @@
         function onLogOut() {
             logOut()
         }
-        
+
         function onDuyet() {
-            console.log({'maCauHoi': document.getElementById('cau_hoi_duyet').getAttribute('ma_cau_hoi')})
-            requestApi('/duyet-cau-hoi', 'POST', {'maCauHoi': document.getElementById('cau_hoi_duyet')
-                .getAttribute('ma_cau_hoi')}).then(res => {
-                    console.log(res, '-----')
-                })
+            console.log({
+                'maCauHoi': document.getElementById('cau_hoi_duyet').getAttribute('ma_cau_hoi')
+            })
+            requestApi('/duyet-cau-hoi', 'POST', {
+                'maCauHoi': document.getElementById('cau_hoi_duyet')
+                    .getAttribute('ma_cau_hoi')
+            }).then(res => {
+                console.log(res, '-----')
+            })
             layCauHoiCanDuyet()
+            setTimeout(() => {
+                alert("Đã duyệt câu hỏi thành công");
+                location.reload();
+            }, 100)
         }
 
         function onNext() {
@@ -316,10 +329,16 @@
                 dsCauHoi += cau.split(' ')[1]
             }
             console.log(dsCauHoi)
-            requestApi('/tao-bo-de', 'POST', {'maCacCauHoi': dsCauHoi})
-            .then(res => {
+            requestApi('/tao-bo-de', 'POST', {
+                    'maCacCauHoi': dsCauHoi
+                })
+                .then(res => {
                     console.log(res, '-----')
                 })
+            setTimeout(() => {
+                alert("Đã tạo đề thành công");
+                location.reload();
+            }, 100)
         }
 
         layCauHoiCanDuyet()
